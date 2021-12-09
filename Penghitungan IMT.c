@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <fcntl.h>
-#include <io.h>
+
 
 void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	int massa;
