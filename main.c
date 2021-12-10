@@ -1,8 +1,32 @@
 #include <stdio.h>
 #include <string.h>
+	
+	//variabel global
+	int masukan;
+	
+//=======================================================================//
+//>>>>>>>>>>>>>>   Fungsi Untuk Menampilkan Menu Pilihan   <<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : menu                                                 //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan menampilkan pilihan menu yang ada    //
+//                  pada program ProHealth, kemudian user akan diminta   //
+//                  untuk memasukkan pilihan yang diinginkan. Maka       //
+//                  selanjutnya program secara automatis mengantarkan    //
+//                  user ke menu pilihan yang diinginkan.                //
+//                                                                       //
+// Versi : 1.1                                      Rev. 1               //
+// Tgl   : 06-12-2021                               Tgl: 09-12-2020      //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: Menambahkan menu Info dan mengeluarkan variabel int masukan   //
+//         menjadi variabel global                                       //
+//=======================================================================//
 
 void menu(){
-	int masukan;
+
 	
 	printf ("pilihan menu : \n");
 	printf ("\t 1) Menghitung IMB \n");
