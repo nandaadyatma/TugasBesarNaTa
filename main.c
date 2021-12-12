@@ -63,7 +63,7 @@ void menu(){
 			break;
 		
 		case 5 :
-			printf ("Coming Soon");
+			keluar();
 			break;
 			
 		default:
@@ -147,6 +147,39 @@ void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	}
 	
 }
+
+void keluar(){
+	int keluar = 1;
+	while(keluar == 1) {
+		system ("cls");
+		
+		printf ("apakah ingin keluar?\n");
+		printf ("0) kembali\n");
+		printf ("1) keluar\n");
+		printf ("masukkan : ");
+		
+		scanf ("%d", &keluar);
+		fflush (stdin);
+		
+		if (keluar == 1) { 
+		printf ("terima kasih\n");
+		break;	
+		}
+		
+		if (keluar == 0) {
+			system ("cls");
+			menu();
+		}
+		
+		if (keluar != 0 && keluar != 1){
+				keluar = 1;
+				system ("cls");
+				system ("pause");
+		printf ("masukkan angka 1 atau 0");
+		
+		}
+		}
+	}
 
 int main() {
 		

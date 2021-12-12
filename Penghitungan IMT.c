@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-
-void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	int massa;
 	float tinggi;
 	float IMT; 
 	int massa_min;
 	int massa_maks;
+	
+void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
+	
 
 
 	system("cls"); /*Layar nantinya akan dibersihkan sebelum menjalankan kode di baris selanjutnya*/
