@@ -148,6 +148,25 @@ void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	
 }
 
+//=======================================================================//
+//>>>>>>>>>>>>>>>>   Fungsi Untuk Keluar dari Program   <<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : keluar                                               //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan membantu pengguna untuk keluar dari  //
+//                  program Pro Health. Di dalam fungsi pengguna akan    //
+//                  ditanya kembali apakah ingin keluar atau kembali ke  //
+//                  tampilan menu dengan memasukkan nilai integer 1      //
+//                  untuk keluar dan 0 untuk kembali ke menu             //
+//                                                                       //
+// Versi : 1.0                                      Rev. -               //
+// Tgl   : 13-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
+
 void keluar(){
 	int keluar = 1;
 	while(keluar == 1) {
