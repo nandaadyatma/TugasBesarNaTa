@@ -284,6 +284,25 @@ void intensitas_aktivitas() {
 		}
 }
 
+//=======================================================================//
+//>>>>>>>>>   Fungsi Untuk Menghitung Kebutuhan Kalori Perhari  <<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : menghitung_kebutuhan_kalori_perhari                  //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini bertujuan untuk menghitung kebutuhan      //
+//                  kalori perhari individu (user). Pada fungsi ini      //
+//                  akan dipanggil fungsi lain yaitu fungsi              //
+//                  memasukkan_jenis_kelamin, BMR_laki_laki,             //
+//                  BMR_perempuan, dan intensitas_aktivitas              //
+//                                                                       //
+// Versi : 1.0                                      Rev. -               //
+// Tgl   : 19-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
+
 void menghitung_kebutuhan_kalori_perhari(){
 	system("cls");
 	
