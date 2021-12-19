@@ -24,6 +24,8 @@ void BMR_laki_laki() {
 	scanf ("%d", &umur);
 	fflush(stdin);
 	
+	system ("cls");
+	
 	//Untuk laki-laki: (88,4 + 13,4 x berat dalam kilogram) + (4,8 x tinggi dalam sentimeter) - (5,68 x usia dalam tahun)
 	
 	BMR = (88.4 + (13.4 * berat_badan)) + (4.8 * tinggi_badan) - (5.68 * umur);
@@ -44,6 +46,8 @@ void BMR_perempuan() {
 	scanf ("%d", &umur);
 	fflush(stdin);
 	
+	system ("cls");
+	
 	//Untuk wanita: (447,6 + 9,25 x berat dalam kilogram) + (3,10 x tinggi dalam sentimeter) - (4,33 x usia dalam tahun)
 
 	BMR = (447.6 + (9.25 * berat_badan)) + (3.10 * tinggi_badan) - (4.33 * umur);
@@ -62,7 +66,9 @@ void memasukkan_jenis_kelamin() {
 }
 
 void intensitas_aktivitas() {
-	
+		
+		system ("cls");
+		
 		printf("Intensitas aktivitas\n");
 		printf("1) tidak aktif   (sangat jarang berolahraga)\n");
 		printf("2) sedikit aktif (berolahraga ringan 1-3 hari seminggu)\n");
@@ -139,7 +145,9 @@ void menghitung_kebutuhan_kalori_perhari(){
 		system ("cls");
 		memasukkan_jenis_kelamin();
 		}
-	
+		
+		system ("pause");
+		system ("cls");
 	}
 
 	intensitas_aktivitas();
