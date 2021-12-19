@@ -31,7 +31,8 @@
 //=======================================================================//
 
 void menu(){
-
+	
+	system ("cls");
 	
 	printf ("pilihan menu : \n");
 	printf ("\t 1) Info \n");
@@ -47,19 +48,27 @@ void menu(){
 	
 	switch (masukan) {
 		case 1 : 
-			printf ("Coming Soon");
+			printf ("Coming Soon\n");
+			system ("pause");
+			menu();
 			break;
 		
 		case 2 :
 			menghitung_IMT();
+			system ("pause");
+			menu();
 			break;
 			
 		case 3 :
-			printf ("Coming Soon");
+			printf ("Coming Soon\n");
+			system ("pause");
+			menu();
 			break;
 			
 		case 4 :
-			printf ("Coming Soon");
+			printf ("Coming Soon\n");
+			system ("pause");
+			menu();
 			break;
 		
 		case 5 :
@@ -97,19 +106,19 @@ void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	if (IMT < 16) {
 		printf ("%f \n",IMT);
 		printf ("Tubuh anda tergolong sangat kurus (Severe Thinnes)\n");
-		printf ("Perhatikan asupan nutrisi Anda! (Konsultasikan dengan dokter bila perlu) \nTubuh Anda perlu tambahan massa tubuh setidaknya %d kg untuk mencapai keadaan normal", (massa_min -  massa));
+		printf ("Perhatikan asupan nutrisi Anda! (Konsultasikan dengan dokter bila perlu) \nTubuh Anda perlu tambahan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa_min -  massa));
 	}
 	
 	else if (IMT >= 16 && IMT <= 17) {
 		printf ("%f \n",IMT);
 		printf ("Tubuh anda tergolong kurus (Moderate Thinnes)\n");
-		printf ("Anda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal", (massa_min -  massa));
+		printf ("Anda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n", (massa_min -  massa));
 	}
 	
 	else if (IMT > 17 && IMT <= 18.5) {
 		printf ("%f \n",IMT);
 		printf ("Tubuh anda tergolong cukup kurus (Mild Thinnes)\n");
-		printf ("Anda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal", (massa_min -  massa));
+		printf ("Anda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n", (massa_min -  massa));
 	}
 	
 	else if (IMT > 18.5 && IMT <= 25) {
@@ -121,25 +130,25 @@ void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	else if (IMT > 25 && IMT <= 30) {
 		printf ("%f \n",IMT);
 		printf ("Kondisi tubuh mulai di atas normal\n");
-		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal", (massa - massa_maks));
+		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa - massa_maks));
 	}
 	
 	else if (IMT > 30 && IMT <= 35) {
 		printf ("%f \n",IMT);
 		printf ("Massa tubuh anda mulai berlebih di kategori obesitas kelas I\n");
-		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal", (massa - massa_maks));
+		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa - massa_maks));
 	}
 	
 	else if (IMT > 35 && IMT <= 40) {
 		printf ("%f \n",IMT);
 		printf ("Tolong Anda mengalami kondisi obesitas kelas II\n");
-		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal", (massa - massa_maks));
+		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa - massa_maks));
 	}
 	
 	else if (IMT > 40) {
 		printf ("%f \n",IMT);
 		printf ("Saat ini, tubuh Anda termasuk kategori obesitas kelas III\n");
-		printf ("Untuk itu perbanyak gerak anda dan atur pola makan dengan baik  \nkarena Anda perlu menurunkan massa tubuh paling tidak %d kg untuk mencapai keadaan normal", (massa_maks -  massa));
+		printf ("Untuk itu perbanyak gerak anda dan atur pola makan dengan baik  \nkarena Anda perlu menurunkan massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n", (massa_maks -  massa));
 	}
 	
 	else {
