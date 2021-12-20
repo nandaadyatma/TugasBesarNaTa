@@ -116,6 +116,27 @@ void menu(){
 	}
 }	
 
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>   Fungsi Untuk Menghitung IMT   <<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : Menu Penghitungan IMT                                //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan menghitung dan menampilkan analisis  //
+//                  Indeks Massa Tubuh di ProHealth, dimana nanti user   //
+//                  akan memasukkan tinggi badan dan massa tubuh, lalu   //
+//                  nantinya program akan menampilkan analisis angka IMT //
+//                  dan kondisi tubuh user secara otomatis.              //
+//                                                                       //
+// Versi : 1.1                                      Rev. 1               //
+// Tgl   : 09-12-2021                               Tgl: 13-12-2021      //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: Menambahkan fungsi keluar pada menu Penghitungan IMT dan      //
+//         melengkapi fungsi dengan tabel keterangan fungsi              //
+//=======================================================================//
+
 void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	
 	system("cls"); /*Layar nantinya akan dibersihkan sebelum menjalankan kode di baris selanjutnya*/
