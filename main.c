@@ -23,9 +23,9 @@
 	
 void loading () {
     system ("cls");                                                    
-	char loading1[50] = "|=================================|";
+	char loading1[50] = "\t|=================================|";
 	int i;
-	printf ("             loading...             \n");
+	printf ("\t             loading...             \n");
 	for (i=0; i < 15; i++){
 		Sleep(150);
 		printf ("%c", loading1[i]);}
@@ -64,7 +64,7 @@ void menu(){
 	
 	system ("cls");
 	
-	printf ("pilihan menu : \n");
+	printf ("\tpilihan menu : \n");
 	printf ("\t 1) Info \n");
 	printf ("\t 2) Menghitung IMT \n");
 	printf ("\t 3) Menghitung Kebutuhan Kalori Perhari \n");
