@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <windows.h>
 	
 	//variabel global
 	
@@ -20,6 +21,24 @@
 	int intensitas;
 	float kebutuhan_kalori_harian; 
 	
+void loading () {
+    system ("cls");                                                    
+	char loading1[50] = "|=================================|";
+	int i;
+	printf ("             loading...             \n");
+	for (i=0; i < 15; i++){
+		Sleep(150);
+		printf ("%c", loading1[i]);}
+	for (i=15; i < 25; i++){
+		Sleep(200);
+		printf ("%c", loading1[i]);}
+	for (i=25; i < 37; i++){
+		Sleep(100);
+		printf ("%c", loading1[i]);
+	}
+	
+}
+
 //=======================================================================//
 //>>>>>>>>>>>>>>   Fungsi Untuk Menampilkan Menu Pilihan   <<<<<<<<<<<<<<//
 //=======================================================================//
@@ -420,6 +439,8 @@ int main() {
 		system ("pause");
 		
 		system ("cls");
+		
+		loading ();
 		
 		menu();
 		
