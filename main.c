@@ -53,21 +53,21 @@ void login() {
 	system("cls");
 			
 	
-	printf ("\t\t==LOGIN==\n");
+	printf ("\t\t\t\t\t\t==LOGIN==\n");
 	printf ("\n");
-	printf ("\tmasukkan username :");
+	printf ("\t\tmasukkan username :");
 	scanf ("%s", &inputusername);
 		
-	printf ("\tmasukkan password :");
+	printf ("\t\tmasukkan password :");
 	scanf ("%s", &inputpassword);
 	
 	/*basis*/
 	if (strcmp(username, inputusername) == 0 && strcmp(password, inputpassword) == 0 )	{
 		system ("cls");
 		
-		printf ("\n\tusername atau password yang anda masukkan benar\n\n");
+		printf ("\n\t\t\t\t\tusername atau password yang anda masukkan benar\n\n");
 		
-		printf ("\tselamat datang\n\t");
+		printf ("\t\t\t\t\t\tselamat datang\n\t");
 		
 		system ("pause");
 		
@@ -82,7 +82,7 @@ void login() {
 		else {
 		system ("cls");
 		
-		printf ("\n\tusername atau password yang anda masukkan salah\n\n\t");
+		printf ("\n\t\t\t\t\tusername atau password yang anda masukkan salah\n\n\t");
 		
 		system ("pause");
 		
@@ -108,9 +108,9 @@ void login() {
 
 void loading () {
     system ("cls");                                                    
-	char loading1[50] = "\t|=================================|";
+	char loading1[50] = "\t\t\t\t|=================================|";
 	int i;
-	printf ("\t             loading...             \n");
+	printf ("\t\t\t\t             loading...             \n");
 	for (i=0; i < 15; i++){
 		Sleep(150);
 		printf ("%c", loading1[i]);}
@@ -163,7 +163,7 @@ void menu() {
     printf ("\t\t\t\t|================================================|\n");
 	
 	printf ("\n");
-	printf ("masukkan pilihan anda ");
+	printf ("\t\t\t\tmasukkan pilihan anda ");
 	
 	scanf ("%d", &masukan);
 	
@@ -237,7 +237,7 @@ void tentang_kami() {
 	    system ("cls");
 		
             printf ("\t\t\t\t----------------------------------------------------------------- \n");
-	    printf ("\t\t\t\t               T e n t a n g     P r o H e a l t h                \n");  
+	    	printf ("\t\t\t\t               T e n t a n g     P r o H e a l t h                \n");  
             printf ("\t\t\t\t----------------------------------------------------------------- \n");
             printf ("\t\t\t\t================================================================= \n");
             printf ("\t\t\t\t*     ProHealth merupakan sebuah program kesehatan mahasiswa    * \n");
@@ -434,7 +434,7 @@ void intensitas_aktivitas() {
 		printf("4) Sangat aktif  (Berolahraga intensitas berat 6-7 hari seminggu)\n");
 		printf("5) Ekstra aktif  (Berolahraga intensitas sangat berat 6-7 hari \n");
 		printf("Seminggu atau bekerja di bidang yang membutuhkan stamina dan fisik yang kuat)\n");
-		printf("\nMasukkan pilihan anda (1-6) : ");
+		printf("\nMasukkan pilihan anda (1-5) : ");
 		
 		scanf("%d", &intensitas);
 		fflush(stdin);
@@ -477,6 +477,8 @@ void intensitas_aktivitas() {
 		memasukkan_jenis_kelamin();
 		}
 		}
+		
+		system ("pause");
 }
 
 //=======================================================================//
