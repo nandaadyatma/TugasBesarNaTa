@@ -1,9 +1,27 @@
 #include <stdio.h>
 
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>>>>  Fungsi About Us  <<<<<<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : void registrasi()                                    //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang berisi informasi    //
+//                  seputaran apa itu program ProHealth yang juga berisi //
+//                  deskripsi singkat mengenai menu-menu yang ada.       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 21-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+
 void aboutUs() {
 
             printf ("\t\t\t\t----------------------------------------------------------------- \n");
-		    printf ("\t\t\t\t                        Tentang ProHealth                         \n");  
+	    printf ("\t\t\t\t                        Tentang ProHealth                         \n");  
             printf ("\t\t\t\t----------------------------------------------------------------- \n");
             printf ("\t\t\t\t================================================================= \n");
             printf ("\t\t\t\t*     ProHealth merupakan sebuah program kesehatan mahasiswa    * \n");
