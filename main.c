@@ -149,13 +149,18 @@ void menu() {
 	
 	system ("cls");
 	
-	printf ("\tpilihan menu : \n");
-	printf ("\t 1) Info \n");
-	printf ("\t 2) Menghitung IMT \n");
-	printf ("\t 3) Menghitung Kebutuhan Kalori Perhari \n");
-	printf ("\t 4) Daftar kalori makanan \n");
-	printf ("\t 5) Menulis catatan kalori \n");
-	printf ("\t 6) keluar");
+	printf ("\t\t\t\t|================================================|\n");
+    printf ("\t\t\t\t|                   << MENU >>                   |\n");
+    printf ("\t\t\t\t|================================================|\n");
+    printf ("\t\t\t\t|   No  |            Pilihan Menu                |\n");
+    printf ("\t\t\t\t|-------|----------------------------------------|\n");
+    printf ("\t\t\t\t|   1   |  Info                                  |\n");
+    printf ("\t\t\t\t|   2   |  Menghitung IMT                        |\n");
+    printf ("\t\t\t\t|   3   |  Menghitung kebutuhan Kalori perhari   |\n");
+    printf ("\t\t\t\t|   4   |  Daftar Kalori Makanan                 |\n");
+    printf ("\t\t\t\t|   5   |  Menulis catatan kalori                |\n");
+    printf ("\t\t\t\t|   6   |  Keluar                                |\n");
+    printf ("\t\t\t\t|================================================|\n");
 	
 	printf ("\n");
 	printf ("masukkan pilihan anda ");
