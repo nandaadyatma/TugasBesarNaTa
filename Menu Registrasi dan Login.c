@@ -66,3 +66,12 @@ int login() {
 	
 
 	}
+	
+	int main(){
+		registrasi();
+		
+		login();
+		
+		return 0;
+		
+	}
