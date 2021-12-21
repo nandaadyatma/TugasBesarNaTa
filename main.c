@@ -2,15 +2,15 @@
 #include <string.h>
 #include <windows.h>
 	
-	//variabel global
+	/*variabel global*/
 	
-	//variabel dalam fungsi login
+	/*variabel dalam fungsi login*/
 	char inputusername [20];
 	char inputpassword [20];
 	char username[20] = "userapa";
 	char password[20] = "passapa";	
 	
-	//variabel dalam perhitungan IMT
+	/*variabel dalam perhitungan IMT*/
 	int masukan;
 	int massa;
 	float tinggi;
@@ -18,7 +18,7 @@
 	int massa_min;
 	int massa_maks;
 	
-	//variabel dalam menghitung kebutuhan kalori perhari
+	/*variabel dalam menghitung kebutuhan kalori perhari*/
 	int berat_badan;
 	int tinggi_badan;
 	int umur;
@@ -61,7 +61,7 @@ void login() {
 	printf ("\tmasukkan password :");
 	scanf ("%s", &inputpassword);
 	
-	//basis
+	/*basis*/
 	if (strcmp(username, inputusername) == 0 && strcmp(password, inputpassword) == 0 )	{
 		system ("cls");
 		
@@ -78,7 +78,7 @@ void login() {
 		menu();
 	}
 	
-	//rekurens
+	/*rekurens*/
 		else {
 		system ("cls");
 		
@@ -125,7 +125,7 @@ void loading () {
 }
 
 //=======================================================================//
-//>>>>>>>>>>>>>>   Fungsi Untuk Menampilkan Menu Pilihan   <<<<<<<<<<<<<<//
+//>>>>>>>>>>>>>    Fungsi Untuk Menampilkan Menu Pilihan    <<<<<<<<<<<<<//
 //=======================================================================//
 // Nama Fungsi    : menu                                                 //
 // Input Argumen  : -                                                    //
@@ -145,17 +145,22 @@ void loading () {
 //         menjadi variabel global                                       //
 //=======================================================================//
 
-void menu(){
+void menu() {
 	
 	system ("cls");
 	
-	printf ("\tpilihan menu : \n");
-	printf ("\t 1) Info \n");
-	printf ("\t 2) Menghitung IMT \n");
-	printf ("\t 3) Menghitung Kebutuhan Kalori Perhari \n");
-	printf ("\t 4) Daftar kalori makanan \n");
-	printf ("\t 5) Menulis catatan kalori \n");
-	printf ("\t 6) keluar");
+	printf ("\t\t\t\t|================================================|\n");
+    printf ("\t\t\t\t|                   << MENU >>                   |\n");
+    printf ("\t\t\t\t|================================================|\n");
+    printf ("\t\t\t\t|   No  |            Pilihan Menu                |\n");
+    printf ("\t\t\t\t|-------|----------------------------------------|\n");
+    printf ("\t\t\t\t|   1   |  Info                                  |\n");
+    printf ("\t\t\t\t|   2   |  Menghitung IMT                        |\n");
+    printf ("\t\t\t\t|   3   |  Menghitung kebutuhan Kalori perhari   |\n");
+    printf ("\t\t\t\t|   4   |  Daftar Kalori Makanan                 |\n");
+    printf ("\t\t\t\t|   5   |  Menulis catatan kalori                |\n");
+    printf ("\t\t\t\t|   6   |  Keluar                                |\n");
+    printf ("\t\t\t\t|================================================|\n");
 	
 	printf ("\n");
 	printf ("masukkan pilihan anda ");
@@ -163,48 +168,113 @@ void menu(){
 	scanf ("%d", &masukan);
 	
 	switch (masukan) {
-		case 1 : 
-			printf ("Coming Soon\n");
+		case 1 : {
+			tentang_kami();
 			system ("pause");
 			menu();
+		}
 			break;
 		
-		case 2 :
+			
+		
+		case 2 : {
 			menghitung_IMT();
 			system ("pause");
 			menu();
+		}
 			break;
 			
-		case 3 :
+		case 3 : {
 			menghitung_kebutuhan_kalori_perhari();
 			menu();
+		}
 			break;
 			
-		case 4 :
+		case 4 : {
 			printf ("Coming Soon\n");
 			system ("pause");
 			menu();
+		}
 			break;
 		
-		case 5 :
+		case 5 : {
 			printf ("Coming Soon\n");
 			system ("pause");
 			menu();
+		}
 			break;
 			
-		case 6 :
+		case 6 : {
 			keluar();
+		}
 			break;
 			
-		default:
+		default: 
 			printf ("Coming Soon");
 	}
-}	
+	}	
 
+
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>   Fungsi Tentang Kami   <<<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : tentang_kami                                         //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang berisi informasi    //
+//                  seputaran apa itu program ProHealth yang juga berisi //
+//                  deskripsi singkat mengenai menu-menu yang ada.       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 21-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+	
+void tentang_kami() {
+	    system ("cls");
+		
+            printf ("\t\t\t\t----------------------------------------------------------------- \n");
+	    printf ("\t\t\t\t               T e n t a n g     P r o H e a l t h                \n");  
+            printf ("\t\t\t\t----------------------------------------------------------------- \n");
+            printf ("\t\t\t\t================================================================= \n");
+            printf ("\t\t\t\t*     ProHealth merupakan sebuah program kesehatan mahasiswa    * \n");
+            printf ("\t\t\t\t*  yang ditujukan untuk teman-teman mahasiswa yang berkeinginan * \n");
+            printf ("\t\t\t\t*  kuat untuk menjaga kesehatannya selama perkuliahan, apalagi  * \n");
+            printf ("\t\t\t\t*    di situasi pandemi Covid-19 yang seolah tak berujung ini.  * \n");
+            printf ("\t\t\t\t*                                                               * \n");
+            printf ("\t\t\t\t*                                                               * \n");
+            printf ("\t\t\t\t*   Bingung apakah sudah memiliki IMT normal, kalori per hari   * \n");
+            printf ("\t\t\t\t*      yang tercukupi, dan apakah asupan cairan tubuh sudah     * \n");
+            printf ("\t\t\t\t*              terpenuhi atau malah sampai dehidrasi?           * \n");
+            printf ("\t\t\t\t*   ProHealth hadir di tengah masalah tersebut untuk membantu   * \n");
+            printf ("\t\t\t\t*                 menjaga pola hidup sehat kalian!              * \n");
+            printf ("\t\t\t\t================================================================= \n\n");
+            printf ("\t\t\t\t                   *** Layanan Kami di ProHealth***               \n");
+            printf ("\t\t\t\t***************************************************************** \n");
+            printf ("\t\t\t\t*     Count IMT (CIMT), yang akan membantu kalian mengetahui    * \n");
+            printf ("\t\t\t\t*       apakah status gizi kalian sudah sesuai berdasarkan      * \n");
+            printf ("\t\t\t\t*        perbandingan tinggi badan dan kadar lemak tubuh.       * \n");
+            printf ("\t\t\t\t*                                                               * \n");
+            printf ("\t\t\t\t*      Takaran Kalori (TAKARI), yang akan menginformasikan      * \n");
+            printf ("\t\t\t\t*    seberapa kalori yang tubuh kalian butuhkan per harinya.    * \n");
+            printf ("\t\t\t\t*                                                               * \n");
+            printf ("\t\t\t\t*   Kalori Saat Ini (KALONI), yang akan membantu kalian dalam   * \n");
+            printf ("\t\t\t\t*      mengkalkulasi berapa banyak kalori yang sudah kalian     * \n");
+            printf ("\t\t\t\t*       Konsumsi di tiap makanan yang dimakan per harinya.      * \n");
+            printf ("\t\t\t\t*                                                               * \n");
+            printf ("\t\t\t\t*  Anti Dehidrasi (ANDI), yang akan memberi pesan untuk kalian  * \n");
+            printf ("\t\t\t\t*    yang kurang minum air mineral dimana kita harus menjaga    * \n");
+            printf ("\t\t\t\t*      agar jangan sampai tubuh kita mengalami dehidrasi.       * \n");
+            printf ("\t\t\t\t***************************************************************** \n");
+}
+	
 //=======================================================================//
 //>>>>>>>>>>>>>>>>>>>   Fungsi Untuk Menghitung IMT   <<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
-// Nama Fungsi    : Menu Penghitungan IMT                                //
+// Nama Fungsi    : menghitung_IMT                                //
 // Input Argumen  : -                                                    //
 // Output Argumen : -                                                    //
 // Deskripsi      : Fungsi ini akan menghitung dan menampilkan analisis  //
@@ -358,13 +428,13 @@ void intensitas_aktivitas() {
 		system ("cls");
 		
 		printf("Intensitas aktivitas\n");
-		printf("1) tidak aktif   (sangat jarang berolahraga)\n");
-		printf("2) sedikit aktif (berolahraga ringan 1-3 hari seminggu)\n");
-		printf("3) cukup aktif   (berolahraga intensitas sedang 3-5 hari seminggu)\n");
-		printf("4) sangat aktif  (berolahraga intensitas berat 6-7 hari seminggu)\n");
-		printf("5) ekstra aktif  (berolahraga intensitas sangat berat 6-7 hari \n");
-		printf("seminggu atau bekerja di bidang yang membutuhkan stamina dan fisik yang kuat)\n");
-		printf("\nmasukkan pilihan anda (1-6) : ");
+		printf("1) Tidak aktif   (Jarang berolahraga)\n");
+		printf("2) sedikit aktif (Berolahraga ringan 1-3 hari seminggu)\n");
+		printf("3) Cukup aktif   (Berolahraga intensitas sedang 3-5 hari seminggu)\n");
+		printf("4) Sangat aktif  (Berolahraga intensitas berat 6-7 hari seminggu)\n");
+		printf("5) Ekstra aktif  (Berolahraga intensitas sangat berat 6-7 hari \n");
+		printf("Seminggu atau bekerja di bidang yang membutuhkan stamina dan fisik yang kuat)\n");
+		printf("\nMasukkan pilihan anda (1-6) : ");
 		
 		scanf("%d", &intensitas);
 		fflush(stdin);
@@ -428,7 +498,7 @@ void intensitas_aktivitas() {
 //                                                                       //
 //=======================================================================//
 
-void menghitung_kebutuhan_kalori_perhari(){
+void menghitung_kebutuhan_kalori_perhari() {
 	system("cls");
 	
 	memasukkan_jenis_kelamin();
@@ -481,7 +551,7 @@ void menghitung_kebutuhan_kalori_perhari(){
 //                                                                       //
 //=======================================================================//
 
-void keluar(){
+void keluar() {
 	int keluar = 1;
 	while(keluar == 1) {
 		system ("cls");
@@ -517,9 +587,7 @@ void keluar(){
 int main() {
 		
 		login();
-		
-		
-		
+
 
 	return 0;
 }
