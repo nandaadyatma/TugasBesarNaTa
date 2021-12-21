@@ -53,21 +53,21 @@ void login() {
 	system("cls");
 			
 	
-	printf ("\t\t\t\t\t\t==LOGIN==\n");
+	printf ("\t\t\t\t\t\t== LOGIN ==\n");
 	printf ("\n");
-	printf ("\t\tmasukkan username :");
+	printf ("\t\t\t\tmasukkan username :");
 	scanf ("%s", &inputusername);
 		
-	printf ("\t\tmasukkan password :");
+	printf ("\t\t\t\tmasukkan password :");
 	scanf ("%s", &inputpassword);
 	
 	/*basis*/
 	if (strcmp(username, inputusername) == 0 && strcmp(password, inputpassword) == 0 )	{
 		system ("cls");
 		
-		printf ("\n\t\t\t\t\tusername atau password yang anda masukkan benar\n\n");
+		printf ("\n\t\t\t\tusername atau password yang anda masukkan benar\n\n");
 		
-		printf ("\t\t\t\t\t\tselamat datang\n\t");
+		printf ("\t\t\t\t\t\tselamat datang\n\t\t\t\t\t");
 		
 		system ("pause");
 		
@@ -82,7 +82,7 @@ void login() {
 		else {
 		system ("cls");
 		
-		printf ("\n\t\t\t\t\tusername atau password yang anda masukkan salah\n\n\t");
+		printf ("\n\t\t\t\tusername atau password yang anda masukkan salah\n\n\t\t\t\t\t");
 		
 		system ("pause");
 		
@@ -107,20 +107,35 @@ void login() {
 //=======================================================================//
 
 void loading () {
-    system ("cls");                                                    
-	char loading1[50] = "\t\t\t\t|=================================|";
+    system ("cls");                                                   
+	char loading1[52] = "\t\t\t\t|================================================|";
 	int i;
-	printf ("\t\t\t\t             loading...             \n");
+	printf              ("\t\t\t\t                    loading...                  \n");
 	for (i=0; i < 15; i++){
 		Sleep(150);
 		printf ("%c", loading1[i]);}
 	for (i=15; i < 25; i++){
 		Sleep(200);
 		printf ("%c", loading1[i]);}
-	for (i=25; i < 37; i++){
+	for (i=25; i < 53; i++){
 		Sleep(100);
 		printf ("%c", loading1[i]);
 	}
+	
+}
+
+//fungsi judul
+void judul_proHEALTH(){
+
+    	printf("\n\n\t\t\t\t                                           %c  \n", 178);
+    	printf("\t\t\t\t                                         %c%c%c%c%c\n",223,223,219,223,223);
+    	printf("\t\t\t\t      %c%c%c %c%c%c  %c%c%c  %c %c %c%c%c %c%c%c %c  %c%c%c %c %c %c\n",
+		219, 223, 219, 219, 223, 219, 219, 223, 219, 219, 219, 178, 223, 223,219, 223, 219, 219, 223, 178, 223, 219, 219, 223);
+     	printf("\t\t\t\t      %c%c%c %c%c%c%c %c %c  %c%c%c %c%c%c %c%c%c %c   %c  %c%c%c\n",
+		219,223,223,219,223,223,219,178,219,219,223,219,219,223,223,219,223,219,219,178,219,223,178);
+	   	printf("\t\t\t\t      %c   %c  %c %c%c%c  %c %c %c%c%c %c %c %c%c%c %c  %c %c\n\n",
+	    223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223);
+	
 	
 }
 
@@ -146,11 +161,12 @@ void loading () {
 //=======================================================================//
 
 void menu() {
-	
 	system ("cls");
 	
-	printf ("\t\t\t\t|================================================|\n");
-    printf ("\t\t\t\t|                   << MENU >>                   |\n");
+	judul_proHEALTH();
+	
+	printf ("\t\t\t\t%c%c==============================================%c%c\n",219,223,223,219);
+    printf ("\t\t\t\t%c                   << MENU >>                   %c\n",186,186);
     printf ("\t\t\t\t|================================================|\n");
     printf ("\t\t\t\t|   No  |            Pilihan Menu                |\n");
     printf ("\t\t\t\t|-------|----------------------------------------|\n");
@@ -159,11 +175,11 @@ void menu() {
     printf ("\t\t\t\t|   3   |  Menghitung kebutuhan Kalori perhari   |\n");
     printf ("\t\t\t\t|   4   |  Daftar Kalori Makanan                 |\n");
     printf ("\t\t\t\t|   5   |  Menulis catatan kalori                |\n");
-    printf ("\t\t\t\t|   6   |  Keluar                                |\n");
-    printf ("\t\t\t\t|================================================|\n");
+    printf ("\t\t\t\t%c   6   |  Keluar                                %c\n",186,186);
+    printf ("\t\t\t\t%c%c==============================================%c%c\n",219,220,220,219);
 	
 	printf ("\n");
-	printf ("\t\t\t\tmasukkan pilihan anda ");
+	printf ("\t\t\t\t\t  masukkan pilihan anda ");
 	
 	scanf ("%d", &masukan);
 	
@@ -235,40 +251,42 @@ void menu() {
 	
 void tentang_kami() {
 	    system ("cls");
-		
-            printf ("\t\t\t\t----------------------------------------------------------------- \n");
-	    	printf ("\t\t\t\t               T e n t a n g     P r o H e a l t h                \n");  
-            printf ("\t\t\t\t----------------------------------------------------------------- \n");
-            printf ("\t\t\t\t================================================================= \n");
-            printf ("\t\t\t\t*     ProHealth merupakan sebuah program kesehatan mahasiswa    * \n");
-            printf ("\t\t\t\t*  yang ditujukan untuk teman-teman mahasiswa yang berkeinginan * \n");
-            printf ("\t\t\t\t*  kuat untuk menjaga kesehatannya selama perkuliahan, apalagi  * \n");
-            printf ("\t\t\t\t*    di situasi pandemi Covid-19 yang seolah tak berujung ini.  * \n");
-            printf ("\t\t\t\t*                                                               * \n");
-            printf ("\t\t\t\t*                                                               * \n");
-            printf ("\t\t\t\t*   Bingung apakah sudah memiliki IMT normal, kalori per hari   * \n");
-            printf ("\t\t\t\t*      yang tercukupi, dan apakah asupan cairan tubuh sudah     * \n");
-            printf ("\t\t\t\t*              terpenuhi atau malah sampai dehidrasi?           * \n");
-            printf ("\t\t\t\t*   ProHealth hadir di tengah masalah tersebut untuk membantu   * \n");
-            printf ("\t\t\t\t*                 menjaga pola hidup sehat kalian!              * \n");
-            printf ("\t\t\t\t================================================================= \n\n");
-            printf ("\t\t\t\t                   *** Layanan Kami di ProHealth***               \n");
-            printf ("\t\t\t\t***************************************************************** \n");
-            printf ("\t\t\t\t*     Count IMT (CIMT), yang akan membantu kalian mengetahui    * \n");
-            printf ("\t\t\t\t*       apakah status gizi kalian sudah sesuai berdasarkan      * \n");
-            printf ("\t\t\t\t*        perbandingan tinggi badan dan kadar lemak tubuh.       * \n");
-            printf ("\t\t\t\t*                                                               * \n");
-            printf ("\t\t\t\t*      Takaran Kalori (TAKARI), yang akan menginformasikan      * \n");
-            printf ("\t\t\t\t*    seberapa kalori yang tubuh kalian butuhkan per harinya.    * \n");
-            printf ("\t\t\t\t*                                                               * \n");
-            printf ("\t\t\t\t*   Kalori Saat Ini (KALONI), yang akan membantu kalian dalam   * \n");
-            printf ("\t\t\t\t*      mengkalkulasi berapa banyak kalori yang sudah kalian     * \n");
-            printf ("\t\t\t\t*       Konsumsi di tiap makanan yang dimakan per harinya.      * \n");
-            printf ("\t\t\t\t*                                                               * \n");
-            printf ("\t\t\t\t*  Anti Dehidrasi (ANDI), yang akan memberi pesan untuk kalian  * \n");
-            printf ("\t\t\t\t*    yang kurang minum air mineral dimana kita harus menjaga    * \n");
-            printf ("\t\t\t\t*      agar jangan sampai tubuh kita mengalami dehidrasi.       * \n");
-            printf ("\t\t\t\t***************************************************************** \n");
+	    
+			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    	printf ("\t\t\t\t|              T E N T A N G     P R O H E A L T H              | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|     ProHealth merupakan sebuah program kesehatan mahasiswa    | \n");
+            printf ("\t\t\t\t|  yang ditujukan untuk teman-teman mahasiswa yang berkeinginan | \n");
+            printf ("\t\t\t\t|  kuat untuk menjaga kesehatannya selama perkuliahan, apalagi  | \n");
+            printf ("\t\t\t\t|    di situasi pandemi Covid-19 yang seolah tak berujung ini.  | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|   Bingung apakah sudah memiliki IMT normal, kalori per hari   | \n");
+            printf ("\t\t\t\t|      yang tercukupi, dan apakah asupan cairan tubuh sudah     | \n");
+            printf ("\t\t\t\t|              terpenuhi atau malah sampai dehidrasi?           | \n");
+            printf ("\t\t\t\t|   ProHealth hadir di tengah masalah tersebut untuk membantu   | \n");
+            printf ("\t\t\t\t|                 menjaga pola hidup sehat kalian!              | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|                 L A Y A N A N    P R O H E A L T H            | \n");
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|     Count IMT (CIMT), yang akan membantu kalian mengetahui    | \n");
+            printf ("\t\t\t\t|       apakah status gizi kalian sudah sesuai berdasarkan      | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|      Takaran Kalori (TAKARI), yang akan menginformasikan      | \n");
+            printf ("\t\t\t\t|    seberapa kalori yang tubuh kalian butuhkan per harinya.    | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|   Kalori Saat Ini (KALONI), yang akan membantu kalian dalam   | \n");
+            printf ("\t\t\t\t|      mengkalkulasi berapa banyak kalori yang sudah kalian     | \n");
+            printf ("\t\t\t\t|       Konsumsi di tiap makanan yang dimakan per harinya.      | \n");
+            printf ("\t\t\t\t|  Anti Dehidrasi (ANDI), yang akan memberi pesan untuk kalian  | \n");
+            printf ("\t\t\t\t|      agar jangan sampai tubuh kita mengalami dehidrasi.       | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
 }
 	
 //=======================================================================//
