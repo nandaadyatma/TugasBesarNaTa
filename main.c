@@ -5,6 +5,7 @@
 	/*variabel global*/
 	
 	/*variabel dalam fungsi login*/
+	int masuk;
 	char inputusername [20];
 	char inputpassword [20];
 	char username[20] = "userapa";
@@ -28,70 +29,120 @@
 	float kebutuhan_kalori_harian; 
 	
 //=======================================================================//
-//>>>>>>>>>>>>>>             Fungsi Untuk Login            <<<<<<<<<<<<<<//
+//>>>>>>>>>>>>>>>>>>>>>>  Fungsi Untuk Registrasi  <<<<<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
-// Nama Fungsi    : login                                                //
-// Input Argumen  : -                                                    //
+// Nama Fungsi    : void registrasi                                      //
+// Input Argumen  : char namalengkap[50], char username[20],             //
+//                  char password[20]                                    //
 // Output Argumen : -                                                    //
-// Deskripsi      : Fungsi ini akan mengarahkan user untuk login saat    //
-//                  awal menggunakan program. User akan diminta          //
-//                  memasukkan username dan password yang sesuai pada    //
-//                  variabel username dan password. Jika input benar     //
-//                  user akan diarahkan ke menu, namun jika salah user   //
-//                  akan diminta kembali memasukkan username dan         //
-//                  password hingga benar.                               //
+// Deskripsi      : Fungsi ini memberi akses masuk ke program ProHealth  //
+//                  apabila pengguna sudah berhasil melakukan registrasi //
+//                  yang setelahnya diarahkan untuk melakukan login.     //
 //                                                                       //
-// Versi : 1.0                                      Rev. -               //
+// Versi : 1                                        Rev. 0               //
 // Tgl   : 21-12-2021                               Tgl: -               //
-// Putu Nanda Arya Adyatma - 2105551035                                  //
+// I Putu Martin Winata - 2105551049                                     //
 // Kelas B                                                               //
 //                                                                       //
+// Revisi: -						                 //
 //=======================================================================//
 
-void login() {
+void masuk() {
+	printf ("Silahkan registrasi atau login terlebih dahulu: \n");
+	printf ("\t 1) Registrasi\n");
+	printf ("\t 2) Login\n");
+	printf ("\t Masukkan angka pilihan: ")
+	scanf ("%d", &masuk);
+	fflush (stdin);
 	
-	system("cls");
+if (masuk = 1) {
+	typedef struct user{
+		char namalengkap [50];
+		char username [20];
+		char password [20];
+		} user;
+
+	user Pengguna;
+
+void registrasi() {	/*deklarasi fungsi void*/
+		printf ("==REGISTRASI==\n");
+		printf ("Masukkan nama lengkap : ");
+		gets (Pengguna.namalengkap);	/*memanggil array of char nama lengkap dengan spasi*/
+		fflush (stdin);
+		
+		printf ("Masukkan username : ");
+		scanf ("%s",&Pengguna.username);
+		fflush (stdin);
+		
+		printf ("Buat password : ");
+		scanf ("%s", &Pengguna.password);
+		system ("cls");
+		}
+}
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>>>  Fungsi Untuk Login  <<<<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : login                                                //
+// Input Argumen  : char namalengkap[50], char username[20],             //
+//                  char password[20]                                    //
+// Output Argumen : Pengguna.namalengkap                                 //
+// Deskripsi      : Fungsi ini memberi akses masuk ke program ProHealth  //
+//                  apabila pengguna sudah berhasil melakukan registrasi //
+//                  yang setelahnya diarahkan untuk melakukan login      //
+//                  dengan memasukkan username dan password yang telah   //
+//                  sebelumnya dibuat saat registrasi.                   //
+//                                                                       //
+// Versi : 1.1                                      Rev. 1               //
+// Tgl   : 21-12-2021                               Tgl: 21-12-21        //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: Menambahkan fungsi main untuk memanggil registrasi dan login  //
+//=======================================================================//
+	
+else if (masuk = 2) {
+int login() {
+		system("cls");
+
+		printf ("\t\t\t==LOGIN==\n");
+		printf ("\n");
+		printf ("\t\t\t || Masukkan username : ");
+		scanf ("%s", &inputusername);
+		printf ("\t\t\t || Masukkan password : ");
+		scanf ("%s", &inputpassword);
+
+			/*basis*/
 			
+			if (strcmp (Pengguna.username, inputusername) == 0 && strcmp (Pengguna.password, inputpassword) == 0)	
+			{
+				system ("cls");
+		
+				printf ("\n\tUsername dan password yang anda masukkan BENAR\n");
+		
+				printf ("SELAMAT  DATANG %s !\n", Pengguna.namalengkap);
+				
+				system ("pause");
+		
+				system ("cls");
+		
+			}
+		
+			/*rekurens*/
+			else {
+			
+			system ("cls");
+		
+			printf ("\nUsername atau password yang anda masukkan SALAH\n");
+
+			system ("pause");
+			}
 	
-	printf ("\t\t\t\t\t\t==LOGIN==\n");
-	printf ("\n");
-	printf ("\t\tmasukkan username :");
-	scanf ("%s", &inputusername);
-		
-	printf ("\t\tmasukkan password :");
-	scanf ("%s", &inputpassword);
-	
-	/*basis*/
-	if (strcmp(username, inputusername) == 0 && strcmp(password, inputpassword) == 0 )	{
-		system ("cls");
-		
-		printf ("\n\t\t\t\t\tusername atau password yang anda masukkan benar\n\n");
-		
-		printf ("\t\t\t\t\t\tselamat datang\n\t");
-		
-		system ("pause");
-		
-		system ("cls");
-		
-		loading ();
-		
-		menu();
+
 	}
-	
-	/*rekurens*/
-		else {
-		system ("cls");
-		
-		printf ("\n\t\t\t\t\tusername atau password yang anda masukkan salah\n\n\t");
-		
-		system ("pause");
-		
-		login();
-	}
-	}
+}	
 	
 //=======================================================================//
-//>>>>>>>>>>>>>>            Fungsi Untuk Loading           <<<<<<<<<<<<<<//
+//>>>>>>>>>>>>>>>>>>>>>      Fungsi Untuk Loading      <<<<<<<<<<<<<<<<<<//
 //=======================================================================//
 // Nama Fungsi    : loading                                              //
 // Input Argumen  : -                                                    //
@@ -108,9 +159,9 @@ void login() {
 
 void loading () {
     system ("cls");                                                    
-	char loading1[50] = "\t\t\t\t|=================================|";
+	char loading1[50] = "\t|=================================|";
 	int i;
-	printf ("\t\t\t\t             loading...             \n");
+	printf ("\t             loading...             \n");
 	for (i=0; i < 15; i++){
 		Sleep(150);
 		printf ("%c", loading1[i]);}
@@ -149,21 +200,16 @@ void menu() {
 	
 	system ("cls");
 	
-	printf ("\t\t\t\t|================================================|\n");
-    printf ("\t\t\t\t|                   << MENU >>                   |\n");
-    printf ("\t\t\t\t|================================================|\n");
-    printf ("\t\t\t\t|   No  |            Pilihan Menu                |\n");
-    printf ("\t\t\t\t|-------|----------------------------------------|\n");
-    printf ("\t\t\t\t|   1   |  Info                                  |\n");
-    printf ("\t\t\t\t|   2   |  Menghitung IMT                        |\n");
-    printf ("\t\t\t\t|   3   |  Menghitung kebutuhan Kalori perhari   |\n");
-    printf ("\t\t\t\t|   4   |  Daftar Kalori Makanan                 |\n");
-    printf ("\t\t\t\t|   5   |  Menulis catatan kalori                |\n");
-    printf ("\t\t\t\t|   6   |  Keluar                                |\n");
-    printf ("\t\t\t\t|================================================|\n");
+	printf ("\tpilihan menu : \n");
+	printf ("\t 1) Info \n");
+	printf ("\t 2) Menghitung IMT \n");
+	printf ("\t 3) Menghitung Kebutuhan Kalori Perhari \n");
+	printf ("\t 4) Daftar kalori makanan \n");
+	printf ("\t 5) Menulis catatan kalori \n");
+	printf ("\t 6) keluar");
 	
 	printf ("\n");
-	printf ("\t\t\t\tmasukkan pilihan anda ");
+	printf ("masukkan pilihan anda ");
 	
 	scanf ("%d", &masukan);
 	
@@ -214,7 +260,6 @@ void menu() {
 	}
 	}	
 
-
 //=======================================================================//
 //>>>>>>>>>>>>>>>>>>>>>>>   Fungsi Tentang Kami   <<<<<<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
@@ -237,7 +282,7 @@ void tentang_kami() {
 	    system ("cls");
 		
             printf ("\t\t\t\t----------------------------------------------------------------- \n");
-	    	printf ("\t\t\t\t               T e n t a n g     P r o H e a l t h                \n");  
+	    printf ("\t\t\t\t               T e n t a n g     P r o H e a l t h                \n");  
             printf ("\t\t\t\t----------------------------------------------------------------- \n");
             printf ("\t\t\t\t================================================================= \n");
             printf ("\t\t\t\t*     ProHealth merupakan sebuah program kesehatan mahasiswa    * \n");
@@ -406,7 +451,7 @@ void BMR_perempuan() {
 	
 	system ("cls");
 	
-	//Untuk wanita: (447,6 + 9,25 x berat dalam kilogram) + (3,10 x tinggi dalam sentimeter) - (4,33 x usia dalam tahun)
+	/*Untuk wanita: (447,6 + 9,25 x berat dalam kilogram) + (3,10 x tinggi dalam sentimeter) - (4,33 x usia dalam tahun)*/
 
 	BMR = (447.6 + (9.25 * berat_badan)) + (3.10 * tinggi_badan) - (4.33 * umur);
 
@@ -434,7 +479,7 @@ void intensitas_aktivitas() {
 		printf("4) Sangat aktif  (Berolahraga intensitas berat 6-7 hari seminggu)\n");
 		printf("5) Ekstra aktif  (Berolahraga intensitas sangat berat 6-7 hari \n");
 		printf("Seminggu atau bekerja di bidang yang membutuhkan stamina dan fisik yang kuat)\n");
-		printf("\nMasukkan pilihan anda (1-5) : ");
+		printf("\nMasukkan pilihan anda (1-6) : ");
 		
 		scanf("%d", &intensitas);
 		fflush(stdin);
@@ -477,8 +522,6 @@ void intensitas_aktivitas() {
 		memasukkan_jenis_kelamin();
 		}
 		}
-		
-		system ("pause");
 }
 
 //=======================================================================//
