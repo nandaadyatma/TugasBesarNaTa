@@ -17,8 +17,7 @@
 // I Putu Martin Winata - 2105551049                                     //
 // Kelas B                                                               //
 //                                                                       //
-// Revisi: Menambahkan fungsi keluar pada menu Penghitungan IMT dan      //
-//         melengkapi fungsi dengan tabel keterangan fungsi              //
+// Revisi: -						                 //
 //=======================================================================//
 
 char inputusername [20];	/*variabel global*/
