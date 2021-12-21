@@ -4,6 +4,12 @@
 	
 	//variabel global
 	
+	//variabel dalam fungsi login
+	char inputusername [20];
+	char inputpassword [20];
+	char username[20] = "userapa";
+	char password[20] = "passapa";	
+	
 	//variabel dalam perhitungan IMT
 	int masukan;
 	int massa;
@@ -21,6 +27,85 @@
 	int intensitas;
 	float kebutuhan_kalori_harian; 
 	
+//=======================================================================//
+//>>>>>>>>>>>>>>             Fungsi Untuk Login            <<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : login                                                //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan mengarahkan user untuk login saat    //
+//                  awal menggunakan program. User akan diminta          //
+//                  memasukkan username dan password yang sesuai pada    //
+//                  variabel username dan password. Jika input benar     //
+//                  user akan diarahkan ke menu, namun jika salah user   //
+//                  akan diminta kembali memasukkan username dan         //
+//                  password hingga benar.                               //
+//                                                                       //
+// Versi : 1.0                                      Rev. -               //
+// Tgl   : 21-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
+
+void login() {
+	
+	system("cls");
+			
+	
+	printf ("\t\t==LOGIN==\n");
+	printf ("\n");
+	printf ("\tmasukkan username :");
+	scanf ("%s", &inputusername);
+		
+	printf ("\tmasukkan password :");
+	scanf ("%s", &inputpassword);
+	
+	//basis
+	if (strcmp(username, inputusername) == 0 && strcmp(password, inputpassword) == 0 )	{
+		system ("cls");
+		
+		printf ("\n\tusername atau password yang anda masukkan benar\n\n");
+		
+		printf ("\tselamat datang\n\t");
+		
+		system ("pause");
+		
+		system ("cls");
+		
+		loading ();
+		
+		menu();
+	}
+	
+	//rekurens
+		else {
+		system ("cls");
+		
+		printf ("\n\tusername atau password yang anda masukkan salah\n\n\t");
+		
+		system ("pause");
+		
+		login();
+	}
+	}
+	
+//=======================================================================//
+//>>>>>>>>>>>>>>            Fungsi Untuk Loading           <<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : loading                                              //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan memberikan animasi loading (memuat)  //
+//                  setelah user berhasil melakukan login                //
+//                                                                       //
+// Versi : 1.0                                      Rev. -               //
+// Tgl   : 20-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
+
 void loading () {
     system ("cls");                                                    
 	char loading1[50] = "\t|=================================|";
@@ -431,51 +516,10 @@ void keluar(){
 
 int main() {
 		
-	char inputusername [20];
-	char inputpassword [20];
-	
-	char username[20] = "userapa";
-	char password[20] = "passapa";
-	
-	while (1) {
-			system("cls");
-			
-	
-	printf ("\t\t==LOGIN==\n");
-	printf ("\n");
-	printf ("\tmasukkan username :");
-		scanf ("%s", &inputusername);
+		login();
 		
-	printf ("\tmasukkan password :");
-		scanf ("%s", &inputpassword);
-	
 		
-	if (strcmp(username, inputusername) == 0 && strcmp(username, inputusername) == 0 )	{
-		system ("cls");
 		
-		printf (" \n\tusername atau password yang anda masukkan benar\n");
-		
-		printf ("selamat datang\n");
-		
-		system ("pause");
-		
-		system ("cls");
-		
-		loading ();
-		
-		menu();
-		
-		break;
-	
-	}
-	else {
-		system ("cls");
-		
-		printf (" \n\tusername atau password yang anda masukkan salah\n");
-		
-		system ("pause");
-	}
-	}
 
 	return 0;
 }
