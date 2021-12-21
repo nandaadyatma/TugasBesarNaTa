@@ -27,6 +27,27 @@
 	int intensitas;
 	float kebutuhan_kalori_harian; 
 	
+//=======================================================================//
+//>>>>>>>>>>>>>>             Fungsi Untuk Login            <<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : login                                                //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan mengarahkan user untuk login saat    //
+//                  awal menggunakan program. User akan diminta          //
+//                  memasukkan username dan password yang sesuai pada    //
+//                  variabel username dan password. Jika input benar     //
+//                  user akan diarahkan ke menu, namun jika salah user   //
+//                  akan diminta kembali memasukkan username dan         //
+//                  password hingga benar.                               //
+//                                                                       //
+// Versi : 1.0                                      Rev. -               //
+// Tgl   : 21-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
+
 void login() {
 	
 	system("cls");
@@ -69,6 +90,22 @@ void login() {
 	}
 	}
 	
+//=======================================================================//
+//>>>>>>>>>>>>>>            Fungsi Untuk Loading           <<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : loading                                              //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan memberikan animasi loading (memuat)  //
+//                  setelah user berhasil melakukan login                //
+//                                                                       //
+// Versi : 1.0                                      Rev. -               //
+// Tgl   : 20-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
+
 void loading () {
     system ("cls");                                                    
 	char loading1[50] = "\t|=================================|";
