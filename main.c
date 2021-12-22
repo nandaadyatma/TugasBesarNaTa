@@ -1,8 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 #include <windows.h>
+
+//warna tulisan
+#define RED "\e[31m\e[1m"
+#define YELLOW "\033[0;33m"
+#define GREEN "\e[32m\e[1m"
+
+
 	
-	/*variabel global*/
+/*variabel global*/
 	
 	/*variabel dalam fungsi login*/
 	char inputusername [20];
@@ -27,6 +34,18 @@
 	int intensitas;
 	float kebutuhan_kalori_harian; 
 	
+	/*variabel pada menu tampilan*/
+	int terangGelap = 0;
+	
+	tampilan() {
+		if (terangGelap == 1) {
+			system ("color 70");
+		}
+		else {
+			system ("color 07");
+		}
+	}
+
 //=======================================================================//
 //>>>>>>>>>>>>>>             Fungsi Untuk Login            <<<<<<<<<<<<<<//
 //=======================================================================//
@@ -65,7 +84,7 @@ void login() {
 	if (strcmp(username, inputusername) == 0 && strcmp(password, inputpassword) == 0 )	{
 		system ("cls");
 		
-		printf ("\n\t\t\t\tusername atau password yang anda masukkan benar\n\n");
+		printf ("\n\t\t\t\tusername dan password yang anda masukkan benar\n\n");
 		
 		printf ("\t\t\t\t\t\tselamat datang\n\t\t\t\t\t");
 		
@@ -131,9 +150,9 @@ void judul_proHEALTH(){
     	printf("\t\t\t\t                                         %c%c%c%c%c\n",223,223,219,223,223);
     	printf("\t\t\t\t      %c%c%c %c%c%c  %c%c%c  %c %c %c%c%c %c%c%c %c  %c%c%c %c %c %c\n",
 		219, 223, 219, 219, 223, 219, 219, 223, 219, 219, 219, 178, 223, 223,219, 223, 219, 219, 223, 178, 223, 219, 219, 223);
-     	printf("\t\t\t\t      %c%c%c %c%c%c%c %c %c  %c%c%c %c%c%c %c%c%c %c   %c  %c%c%c\n",
+    	printf("\t\t\t\t      %c%c%c %c%c%c%c %c %c  %c%c%c %c%c%c %c%c%c %c   %c  %c%c%c\n",
 		219,223,223,219,223,223,219,178,219,219,223,219,219,223,223,219,223,219,219,178,219,223,178);
-	   	printf("\t\t\t\t      %c   %c  %c %c%c%c  %c %c %c%c%c %c %c %c%c%c %c  %c %c\n\n",
+		printf("\t\t\t\t      %c   %c  %c %c%c%c  %c %c %c%c%c %c %c %c%c%c %c  %c %c\n\n",
 	    223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223);
 	
 	
@@ -175,7 +194,8 @@ void menu() {
     printf ("\t\t\t\t|   3   |  Menghitung kebutuhan Kalori perhari   |\n");
     printf ("\t\t\t\t|   4   |  Daftar Kalori Makanan                 |\n");
     printf ("\t\t\t\t|   5   |  Menulis catatan kalori                |\n");
-    printf ("\t\t\t\t%c   6   |  Keluar                                %c\n",186,186);
+    printf ("\t\t\t\t|   6   |  Pengaturan Tampilan                   |\n");
+    printf ("\t\t\t\t%c   7   |  Keluar                                %c\n",186,186);
     printf ("\t\t\t\t%c%c==============================================%c%c\n",219,220,220,219);
 	
 	printf ("\n");
@@ -185,7 +205,7 @@ void menu() {
 	
 	switch (masukan) {
 		case 1 : {
-			tentang_kami();
+			info();
 			system ("pause");
 			menu();
 		}
@@ -221,6 +241,12 @@ void menu() {
 			break;
 			
 		case 6 : {
+			mode_terangGelap();
+			menu();
+		}
+			break;
+		
+		case 7 : {
 			keluar();
 		}
 			break;
@@ -249,10 +275,54 @@ void menu() {
 // Revisi: -						                 //
 //=======================================================================//
 	
-void tentang_kami() {
-	    system ("cls");
+void info() {
+			int masukan_info;
+			
+	    	system ("cls");
+	    	
+	    	printf ("\t\t\t\t%c%c=======================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|------------------------------------------| \n");
+	    	printf ("\t\t\t\t|                  I N F O                 | \n");  
+            printf ("\t\t\t\t|------------------------------------------| \n");
+            printf ("\t\t\t\t%c%c======================================%c%c \n",219,220,220,219);
+            
+            printf ("\t\t\t\t\t 1) Apa itu ProHealth\n");
+            printf ("\t\t\t\t\t 2) Layanan ProHealth\n");
+            printf ("\t\t\t\t\t 3) Tentang Pembuat\n");
+            printf ("\t\t\t\t\t Masukkan pilihan :");
+            scanf ("%d", &masukan_info);
+            fflush(stdin);
+            
+            switch (masukan_info) {
+            	case 1 : {
+            		system ("cls");
+            		info_ProHealth();
+					break;
+				}
+				case 2 : {
+					system ("cls");
+					layanan_ProHealth();
+					break;
+				}
+				case 3 : {
+					system ("cls");
+					tentang_pembuat();
+					break;
+				}
+				
+				default :  {
+					menu();
+				}
+			}
+            
+            
 	    
-			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+			
+}
+
+void info_ProHealth() {
+	
+			printf ("\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
 	    	printf ("\t\t\t\t|              T E N T A N G     P R O H E A L T H              | \n");  
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
@@ -269,7 +339,12 @@ void tentang_kami() {
             printf ("\t\t\t\t|   ProHealth hadir di tengah masalah tersebut untuk membantu   | \n");
             printf ("\t\t\t\t|                 menjaga pola hidup sehat kalian!              | \n");
             printf ("\t\t\t\t|                                                               | \n");
-            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
+
+void layanan_ProHealth() {
+	
+			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|                 L A Y A N A N    P R O H E A L T H            | \n");
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
@@ -288,7 +363,50 @@ void tentang_kami() {
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
 }
+
+void tentang_pembuat() {
 	
+			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    	printf ("\t\t\t\t|                 T E N T A N G     P E M B U A T               | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|                   ProHealth ini dibuat oleh  :                | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|               Putu Nanda Arya Adyatma (2105551035))           | \n");
+            printf ("\t\t\t\t|                   (github.com/nandaadyatma)                   | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|                  Putu Martin Winata (105551049))              | \n");
+            printf ("\t\t\t\t|                       (github.com/winataa)                    | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|                          Desember 2021                        | \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
+
+void info_IMT() {
+			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    	printf ("\t\t\t\t|                  M E N G H I T U N G    I M T                 | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|   IMT (Indeks Massa Tubuh) merupakan nilai untuk menentukan   | \n");
+            printf ("\t\t\t\t|   apakah tubuh suatu indidu tergolong ideal atau tidak. IMT   | \n");
+            printf ("\t\t\t\t|            dapat dihitung dengan menggunakan rumus            | \n");
+            printf ("\t\t\t\t|                 IMT = massa / (tinggi * tinggi)               | \n");
+            printf ("\t\t\t\t|                     masssa (kg),tinggi (cm)                   | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|      IMT tergolong normal yaitu berada diantara 18.5 - 25     | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
+
+void judul_IMT() {
+			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    	printf ("\t\t\t\t|                  M E N G H I T U N G    I M T                 | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
 //=======================================================================//
 //>>>>>>>>>>>>>>>>>>>   Fungsi Untuk Menghitung IMT   <<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
@@ -314,15 +432,24 @@ void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	
 	system("cls"); /*Layar nantinya akan dibersihkan sebelum menjalankan kode di baris selanjutnya*/
 	
-
-        printf ( "Masukkan tinggi badan anda (dalam cm) : ");
+	info_IMT();
+	
+	system("pause");
+	
+	system("cls");
+	
+	judul_IMT();
+	
+        printf ("\t\t\t\t\tMasukkan tinggi badan anda (dalam cm) : ");
 	    scanf ("%f", &tinggi);
 	    fflush (stdin);
-	    printf ("Masukkan massa tubuh anda (dalam kg) : ");
+	    printf ("\t\t\t\t\tMasukkan massa  tubuh anda (dalam kg) : ");
 	    scanf ("%d", &massa);
 	    fflush (stdin);
 	
 	system("cls");
+	
+	judul_IMT();
 	
 	    tinggi = tinggi / 100;
 	
@@ -331,58 +458,74 @@ void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	    massa_min = (18.5 *(tinggi*tinggi));
 	    massa_maks = (25 * (tinggi*tinggi));
 	
-	printf ("Penasaran sama hasilnya? Ini diaaa\n Angka Indeks Massa Tubuh (IMT) anda adalah: ");
+	printf ("\n\t\t\t\t\t   Angka Indeks Massa Tubuh (IMT) anda adalah:\n ");
         
 	if (IMT < 16) {
-		printf ("%f \n",IMT);
-		printf ("Tubuh anda tergolong sangat kurus (Severe Thinnes)\n");
-		printf ("Perhatikan asupan nutrisi Anda! (Konsultasikan dengan dokter bila perlu) \nTubuh Anda perlu tambahan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa_min -  massa));
+		printf (RED "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tTubuh anda tergolong sangat kurus (Severe Thinnes)\n");
+		printf ("\t\t\tPerhatikan asupan nutrisi Anda! (Konsultasikan dengan dokter bila perlu) \n\t\t\t\Tubuh Anda perlu tambahan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n\t\t\t\t\t", (massa_min -  massa));
 	}
 	
 	else if (IMT >= 16 && IMT <= 17) {
-		printf ("%f \n",IMT);
-		printf ("Tubuh anda tergolong kurus (Moderate Thinnes)\n");
-		printf ("Anda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n", (massa_min -  massa));
+		printf (RED "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tTubuh anda tergolong kurus sedang (Moderate Thinnes)\n");
+		printf ("\t\t\tAnda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n\t\t\t\t\t", (massa_min -  massa));
 	}
 	
 	else if (IMT > 17 && IMT <= 18.5) {
-		printf ("%f \n",IMT);
-		printf ("Tubuh anda tergolong cukup kurus (Mild Thinnes)\n");
-		printf ("Anda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n", (massa_min -  massa));
+		printf (YELLOW "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tTubuh anda tergolong cukup kurus (Mild Thinnes)\n");
+		printf ("\t\t\tAnda perlu menambah massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n\t\t\t\t\t", (massa_min -  massa));
 	}
 	
 	else if (IMT > 18.5 && IMT <= 25) {
-		printf ("%f \n",IMT);
-		printf ("Kondisi Anda saat ini sudah dalam kategori normal\n");
-		printf ("Tetap jaga pola makan Anda dan teruskan pola hidup yang sehat agar IMT tetap stabil!\n");
+		printf (GREEN "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tKondisi Anda saat ini sudah dalam kategori normal\n");
+		printf ("\t\t\tTetap jaga pola makan Anda dan teruskan pola hidup yang sehat agar IMT tetap stabil!\n\t\t\t\t\t");
 	}
 	
 	else if (IMT > 25 && IMT <= 30) {
-		printf ("%f \n",IMT);
-		printf ("Kondisi tubuh mulai di atas normal\n");
-		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa - massa_maks));
+		printf (YELLOW "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tKondisi tubuh mulai di atas normal\n");
+		printf ("\t\t\tAnda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n\t\t\t\t\t", (massa - massa_maks));
 	}
 	
 	else if (IMT > 30 && IMT <= 35) {
-		printf ("%f \n",IMT);
-		printf ("Massa tubuh anda mulai berlebih di kategori obesitas kelas I\n");
-		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa - massa_maks));
+		printf (RED "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tMassa tubuh anda mulai berlebih di kategori obesitas kelas I\n");
+		printf ("\t\t\tAnda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n\t\t\t\t\t", (massa - massa_maks));
 	}
 	
 	else if (IMT > 35 && IMT <= 40) {
-		printf ("%f \n",IMT);
-		printf ("Tolong Anda mengalami kondisi obesitas kelas II\n");
-		printf ("Anda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n", (massa - massa_maks));
+		printf (RED "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tTolong Anda mengalami kondisi obesitas kelas II\n");
+		printf ("\t\t\tAnda perlu menurunkan massa tubuh setidaknya %d kg untuk mencapai keadaan normal\n\t\t\t\t\t", (massa - massa_maks));
 	}
 	
 	else if (IMT > 40) {
-		printf ("%f \n",IMT);
-		printf ("Saat ini, tubuh Anda termasuk kategori obesitas kelas III\n");
-		printf ("Untuk itu perbanyak gerak anda dan atur pola makan dengan baik  \nkarena Anda perlu menurunkan massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n", (massa_maks -  massa));
+		printf (RED "\t\t\t\t\t\t\t   %0.3f \n",IMT );
+		sleep(2);
+		tampilan();
+		printf ("\n\t\t\t\t\tSaat ini, tubuh Anda termasuk kategori obesitas kelas III\n");
+		printf ("\t\t\t\t    Untuk itu perbanyak gerak anda dan atur pola makan dengan baik  \n\t\t\tAnda perlu menurunkan massa tubuh paling tidak %d kg untuk mencapai keadaan normal\n\t\t\t\t\t", (massa_maks -  massa));
 	}
 	
 	else {
-		printf ("IMT tidak valid! Mohon masukkan angka yang sesuai.\n");
+		printf ("\t\t\t\t\tIMT tidak valid! Mohon masukkan angka yang sesuai.\n");
 	}
 	
 }
@@ -552,6 +695,37 @@ void menghitung_kebutuhan_kalori_perhari() {
 	
 }
 
+mode_terangGelap(){
+	
+
+	printf("\t\t\t\t\tpilihan mode\n");
+	printf("\t\t\t\t\t1) Terang \n");
+	printf("\t\t\t\t\t2) Gelap  \n");
+	printf("\t\t\t\t\t\tMasukkan : ");
+	
+	scanf("%d",&terangGelap);
+	
+	system ("cls");
+	
+	switch (terangGelap) {
+		case 1 : {
+			system ("cls");
+			system ("color 70");
+			menu();
+			break;
+		}
+		
+		case 2 : {
+			system ("cls");
+			system ("color 07");
+			menu();
+			break;
+		
+		default : menu();
+		}
+	}
+}
+
 //=======================================================================//
 //>>>>>>>>>>>>>>>>   Fungsi Untuk Keluar dari Program   <<<<<<<<<<<<<<<<<//
 //=======================================================================//
@@ -576,16 +750,16 @@ void keluar() {
 	while(keluar == 1) {
 		system ("cls");
 		
-		printf ("apakah ingin keluar?\n");
-		printf ("0) kembali\n");
-		printf ("1) keluar\n");
-		printf ("masukkan : ");
+		printf ("\t\t\t\t\tapakah yakin ingin keluar?\n");
+		printf ("\t\t\t\t\t0) kembali\n");
+		printf ("\t\t\t\t\t1) keluar\n");
+		printf ("\t\t\t\t\tmasukkan : ");
 		
 		scanf ("%d", &keluar);
 		fflush (stdin);
 		
 		if (keluar == 1) { 
-		printf ("terima kasih\n");
+		printf ("\t\t\t\t\t\t\n\nterima kasih\n");
 		break;	
 		}
 		
