@@ -8,8 +8,16 @@
 #define GREEN "\e[32m\e[1m"
 
 
-	
 /*variabel global*/
+
+	/*variabel dalam fungsi login*/
+	typedef struct user{
+	char namalengkap [50];
+	char username [20];
+	char password [20];
+	} user;
+
+	user Pengguna;
 	
 	/*variabel dalam fungsi login*/
 	char inputusername [20];
@@ -45,6 +53,44 @@
 			system ("color 07");
 		}
 	}
+
+
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>  Fungsi Untuk Registrasi  <<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : void registrasi                                      //
+// Input Argumen  : char namalengkap[50], char username[20],             //
+//                  char password[20]                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini memberi akses masuk ke program ProHealth  //
+//                  apabila pengguna sudah berhasil melakukan registrasi //
+//                  yang setelahnya diarahkan untuk melakukan login.     //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 21-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+
+
+
+
+void registrasi() {	/*deklarasi fungsi void*/
+		printf ("==REGISTRASI==\n");
+		printf ("Masukkan nama lengkap : ");
+		gets (Pengguna.namalengkap);	/*memanggil array of char nama lengkap dengan spasi*/
+		fflush (stdin);
+		
+		printf ("Masukkan username : ");
+		scanf ("%s",&Pengguna.username);
+		fflush (stdin);
+		
+		printf ("Buat password : ");
+		scanf ("%s", &Pengguna.password);
+		system ("cls");
+		}
 
 //=======================================================================//
 //>>>>>>>>>>>>>>             Fungsi Untuk Login            <<<<<<<<<<<<<<//
@@ -276,15 +322,15 @@ void menu() {
 //=======================================================================//
 	
 void info() {
-			int masukan_info;
+	int masukan_info;
 			
-	    	system ("cls");
+	    system ("cls");
 	    	
-	    	printf ("\t\t\t\t%c%c=======================================%c%c \n",219,223,223,219);
+	    printf ("\t\t\t\t%c%c=======================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|------------------------------------------| \n");
-	    	printf ("\t\t\t\t|                  I N F O                 | \n");  
+	    printf ("\t\t\t\t|                  I N F O                 | \n");  
             printf ("\t\t\t\t|------------------------------------------| \n");
-            printf ("\t\t\t\t%c%c======================================%c%c \n",219,220,220,219);
+            printf ("\t\t\t\t%c%c===========================================%c%c \n",219,220,220,219);
             
             printf ("\t\t\t\t\t 1) Apa itu ProHealth\n");
             printf ("\t\t\t\t\t 2) Layanan ProHealth\n");
@@ -324,7 +370,7 @@ void info_ProHealth() {
 	
 			printf ("\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-	    	printf ("\t\t\t\t|              T E N T A N G     P R O H E A L T H              | \n");  
+	    printf ("\t\t\t\t|              T E N T A N G     P R O H E A L T H              | \n");  
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|===============================================================| \n");
             printf ("\t\t\t\t|     ProHealth merupakan sebuah program kesehatan mahasiswa    | \n");
