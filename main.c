@@ -56,6 +56,35 @@
 		}
 	}
 
+//prototype fungsi
+	void regis_login();
+	void info();
+	void registrasi();
+	void login();
+	void loading();
+	void judul_proHEALTH();
+	void menu();
+	void info();
+	void info_ProHealth();
+	void layanan_ProHealth();
+	void tentang_pembuat();
+	void info_IMT();
+	void judul_IMT();
+	void menghitung_IMT();
+	void menghitung_kebutuhan_kalori_perhari();
+	void memasukkan_jenis_kelamin();
+	void BMR_laki_laki();
+	void BMR_perempuan();
+	void intensitas_aktivitas();
+	void mode_terangGelap();
+	void keluar();
+
+int main() {
+		
+		regis_login();
+
+	return 0;
+	}
 
 //=======================================================================//
 //>>>>>>>>>>>>>>>>>>>>>>  Fungsi Untuk Registrasi  <<<<<<<<<<<<<<<<<<<<<<//
@@ -501,7 +530,7 @@ void judul_IMT() {
 //         melengkapi fungsi dengan tabel keterangan fungsi              //
 //=======================================================================//
 
-void menghitung_IMT () { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
+void menghitung_IMT() { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	
 	system("cls"); /*Layar nantinya akan dibersihkan sebelum menjalankan kode di baris selanjutnya*/
 	
@@ -768,7 +797,7 @@ void menghitung_kebutuhan_kalori_perhari() {
 	
 }
 
-mode_terangGelap() {
+void mode_terangGelap() {
 	
 
 	printf("\t\t\t\t\tpilihan mode\n");
@@ -851,10 +880,4 @@ void keluar() {
 		}
 	}
 
-int main() {
-		
-		regis_login();
 
-
-	return 0;
-}
