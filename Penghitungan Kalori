@@ -68,7 +68,47 @@ makanan Makanan[] = {
 	{"Fuyung Hai      ", 50, 114},
 	{"Rendang Daging       ", 75, 285},   //43
 	
-	
+	//sayur
+	{"Acar Kuning          ", 75, 53},  //44
+	{"Bening Bayam         ", 50, 18},
+	{"Cah Labu Siam        ", 100, 42},
+	{"Sayur Asam           ", 100, 88},
+	{"Sop Ayam             ", 100, 95},
+	{"Sop Bayam            ", 50, 78},
+	{"Sayur Lodeh          ", 100, 59},
+	{"Cah Kacang Panjang   ", 75, 53},
+	{"Tumis Buncis         ", 100, 52},
+	{"Tumis Daun Singkong  ", 75, 53},
+	{"Tumis Kacang + Jagung", 75, 53},
+	{"Gudeg                ", 150, 132}, //55
+
+	{"Apel                 ", 160, 92},      //56 
+	{"Apel Merah           ", 140, 82},
+	{"Apel Merah           ", 140, 82},
+	{"Belimbing            ", 160, 80},
+	{"Duku                 ", 200, 81},
+	{"Jambu Air            ", 60, 35},
+	{"Jambu Biji           ", 320, 157},
+	{"Jeruk Medan          ", 140, 46},
+	{"Jeruk Pontianak      ", 150, 67},
+	{"Jeruk Sunkist        ", 200, 40},
+	{"Mangga Manalagi      ", 100, 72},
+	{"Nanas                ", 200, 81},
+	{"Pepaya               ", 100, 81},
+	{"Pir                  ", 200, 80},
+	{"Pir Hijau            ", 200, 105},
+	{"Pisang Rebus         ", 250, 136},
+	{"Salak                ", 150, 64},
+	{"Semangka             ", 150, 48},
+	{"Alpukat              ", 100, 85},
+	{"Anggur 		           ", 125, 60},
+	{"Klengkeng            ", 200, 79},
+	{"Melon                ", 200, 46},
+	{"Mangga Harum Manis   ", 300, 90},
+	{"Pisang Ambon         ", 100, 74},
+	{"Pisang Mas           ", 125, 11},
+	{"Pisang Raja          ", 150, 126},
+	{"Sirsak               ", 125, 55},     //81
 
 
 };
