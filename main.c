@@ -46,9 +46,9 @@
 	float kebutuhan_kalori_harian; 
 	
 	/*Menghitung kalori*/
-int total_kalori = 0;
-int j = 2;
-int i = 2;
+	int total_kalori = 0;
+	int j = 2;
+	int i = 2;
 
 typedef struct makanan {
 	char nama_makanan[50];
@@ -112,7 +112,7 @@ makanan Makanan[] = {
 	{"Rendang Daging       ", 75, 285},   //43
 	
 	//sayur
-	{"Acar Kuning          ", 75, 53},  //44
+	{"Acar Kuning          ", 75, 53},    //44
 	{"Bening Bayam         ", 50, 18},
 	{"Cah Labu Siam        ", 100, 42},
 	{"Sayur Asam           ", 100, 88},
@@ -123,9 +123,9 @@ makanan Makanan[] = {
 	{"Tumis Buncis         ", 100, 52},
 	{"Tumis Daun Singkong  ", 75, 53},
 	{"Tumis Kacang + Jagung", 75, 53},
-	{"Gudeg                ", 150, 132}, //55
+	{"Gudeg                ", 150, 132},  //55
 
-	{"Apel                 ", 160, 92},      //56 
+	{"Apel                 ", 160, 92},   //56 
 	{"Apel Merah           ", 140, 82},
 	{"Apel Merah           ", 140, 82},
 	{"Belimbing            ", 160, 80},
@@ -176,7 +176,6 @@ makanan Makanan[] = {
 
 //prototype fungsi
 	void regis_login();
-	void info();
 	void registrasi();
 	void login();
 	void loading();
@@ -199,6 +198,8 @@ makanan Makanan[] = {
 	void menulis_kalori();
 	void mode_terangGelap();
 	void keluar();
+	
+// fungsi main
 
 int main() {
 		
@@ -207,25 +208,25 @@ int main() {
 	return 0;
 	}
 
+
 //=======================================================================//
-//>>>>>>>>>>>>>>>>>>>>>>  Fungsi Untuk Registrasi  <<<<<<<<<<<<<<<<<<<<<<//
+//>>>>>>>>>>>>>>> Fungsi Untuk Registrasi atau Login  <<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
-// Nama Fungsi    : void registrasi                                      //
-// Input Argumen  : char namalengkap[50], char username[20],             //
-//                  char password[20]                                    //
+// Nama Fungsi    : regis_login                                          //
+// Input Argumen  : -                                                    //
+//                  -                                                    //
 // Output Argumen : -                                                    //
-// Deskripsi      : Fungsi ini memberi akses masuk ke program ProHealth  //
-//                  apabila pengguna sudah berhasil melakukan registrasi //
-//                  yang setelahnya diarahkan untuk melakukan login.     //
+// Deskripsi      : Fungsi ini akan mengarahkan pengguna untuk           //
+//                  melakukan registrasi atau login dengan memasukkan   //
+//                  pilihan.                                             //
 //                                                                       //
 // Versi : 1                                        Rev. 0               //
-// Tgl   : 21-12-2021                               Tgl: -               //
-// I Putu Martin Winata - 2105551049                                     //
+// Tgl   : 23-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
 // Kelas B                                                               //
 //                                                                       //
-// Revisi: -						                 //
+// Revisi: -						                                     //
 //=======================================================================//
-
 
 void regis_login() {
 	printf("\t\t\t\t\t1) registrasi\n");
@@ -251,6 +252,25 @@ void regis_login() {
 		}
 }
 }
+
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>  Fungsi Untuk Registrasi  <<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : void registrasi                                      //
+// Input Argumen  : -                                                    //
+//                  -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini memberi akses masuk ke program ProHealth  //
+//                  apabila pengguna sudah berhasil melakukan registrasi //
+//                  yang setelahnya diarahkan untuk melakukan login.     //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 21-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                                     //
+//=======================================================================//
 
 void registrasi() {	/*deklarasi fungsi void*/
 		system("cls");
@@ -366,7 +386,23 @@ void loading () {
 	
 }
 
-//fungsi judul
+//=======================================================================//
+//>>>>>>>>>>>    Fungsi Untuk Menampilkan Judul ProHealth    <<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : judul_proHEALTH                                      //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan menampilkan tulisan judul            //
+//                  pada program ProHealth menggunakan character block   //
+//                  yang disusun satu persatu                            //
+//                                                                       //
+// Versi : 1.0                                      Rev. 0               //
+// Tgl   : 22-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
+
 void judul_proHEALTH(){
 
     	printf("\n\n\t\t\t\t                                           %c  \n", 178);
@@ -1175,6 +1211,23 @@ void menulis_kalori() {
 	printf ("\t\t\t\tData berhasil ditulis \n\t\t\t\t");
 
 }
+
+//=======================================================================//
+//>>>>>>>>>>>>>>>>    Fungsi Untuk Mengatur Tampilan    <<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : mode_terangGelap                                     //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini akan membantu pengguna untuk mengatur     //
+//                  tampilan terminal program. User akan diminta untuk   //
+//                  memilih tampilan yang diinginkan                     //
+//                                                                       //
+// Versi : 1.0                                      Rev. -               //
+// Tgl   : 22-12-2021                               Tgl: -               //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
+// Kelas B                                                               //
+//                                                                       //
+//=======================================================================//
 
 void mode_terangGelap() {
 	
