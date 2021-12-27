@@ -211,7 +211,7 @@ int main() {
 
 
 //=======================================================================//
-//>>>>>>>>>>>>>>> Fungsi Untuk Registrasi atau Login  <<<<<<<<<<<<<<<<<<<//
+//>>>>>>>>>>>>>>>   Fungsi Untuk Registrasi atau Login   <<<<<<<<<<<<<<<<//
 //=======================================================================//
 // Nama Fungsi    : regis_login                                          //
 // Input Argumen  : -                                                    //
@@ -273,7 +273,7 @@ void regis_login() {
 // Revisi: -						                 //
 //=======================================================================//
 
-void registrasi() {	/*deklarasi fungsi void*/
+void registrasi() {	//deklarasi fungsi void
 		system("cls");
 		
 		printf ("\t\t\t\t\t\t==REGISTRASI==\n");
@@ -327,11 +327,11 @@ void login() {
 	scanf ("%s", &inputpassword);
 	fflush (stdin);
 	
-	/*basis*/
+	//basis
 	if ((strcmp(username, inputusername) == 0 || strcmp(Pengguna.username, inputusername) == 0) && ( strcmp(password, inputpassword) == 0 || strcmp(Pengguna.password, inputpassword) == 0 )	){
 		system ("cls");
 		
-		printf ("\n\t\t\t\tusername dan password yang anda masukkan benar\n\n");
+		printf (GREEN "\n\t\t\t\tusername dan password yang anda masukkan benar\n\n");
 		
 		printf ("\t\t\t\t\t\tSelamat datang %c\n\t\t\t\t\t", &Pengguna.namalengkap);
 		
@@ -344,11 +344,11 @@ void login() {
 		menu();
 	}
 	
-	/*rekurens*/
+	//rekurens
 		else {
 		system ("cls");
 		
-		printf ("\n\t\t\t\tUsername atau password yang anda masukkan salah\n\n\t\t\t\t\t");
+		printf (RED "\n\t\t\t\tUsername atau password yang anda masukkan salah\n\n\t\t\t\t\t");
 		
 		system ("pause");
 		
@@ -436,7 +436,7 @@ void judul_proHEALTH(){
 //                  user ke menu pilihan yang diinginkan.                //
 //                                                                       //
 // Versi : 1.1                                      Rev. 1               //
-// Tgl   : 06-12-2021                               Tgl: 09-12-2020      //
+// Tgl   : 06-12-2021                               Tgl: 09-12-2021      //
 // Putu Nanda Arya Adyatma - 2105551035                                  //
 // Kelas B                                                               //
 //                                                                       //
@@ -767,7 +767,25 @@ void menampilkan_buah() {
 	
 }
 
-
+//=======================================================================//
+//>>>>>>>>>>>   Fungsi Untuk Menampilkan Kalori Pada Makanan   <<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : menu_daftar_kalori_makanan                           //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini bertujuan agar user menjadi lebih tahu    //
+//                  berapa kandungan kalori yang ada di setiap makanan   //
+//                  berdasarkan kategori karbohidrat, lauk pauk, buah    //
+//                  dan sayur                                            //
+//                                                                       //
+// Versi : 1.1                                      Rev. 1               //
+// Tgl   : 24-12-2021                               Tgl: 24-12-21        //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: Melengkapi daftar buah dan sayur pada daftar makanan          //
+//                                                                       //
+//=======================================================================//
 void menu_daftar_kalori_makanan(){
 	system ("cls");
 	
@@ -827,7 +845,7 @@ void daftar_kalori_makanan(){
 // Deskripsi      : Fungsi ini bertujuan untuk menghitung kebutuhan      //
 //                  kalori perhari individu (user). Fungsi ini nantinya  //
 //                  juga akan memanggil fungsi lain yakni daftar_kalori  //
-//                  makanan, jumlah_gram, kalori_makanan_ dan menambah   //
+//                  makanan, jumlah_gram, kalori_makanan dan menambah    //
 //                                                                       //
 //                                                                       //
 //                                                                       //
@@ -1248,7 +1266,7 @@ void menulis_kalori() {
        	
 		printf ("\t\t\t\tMasukkan jumlah kalori yang dikonsumsi (kal): ", i+1);
 		scanf("%d",&kalori);
-		fprintf(fp,"\t\t\tJumlah kalori : %d kal\n", kalori); 
+		fprintf(fp,"\t\t\tJumlah kalori : %d kal\n", &kalori); 
 		fprintf(fp,"\t\t\t\--------------------------------\n"); 
 		fflush (stdin);
 		
@@ -1272,7 +1290,7 @@ void menulis_kalori() {
 	
 	fclose(fp);
 	
-	printf ("\t\t\t\tData berhasil ditulis \n\t\t\t\t");
+	printf ("\t\t\t\tData berhasil ditulis. \n\t\t\t\t");
 
 }
 
