@@ -175,26 +175,30 @@ makanan Makanan[] = {
 
 
 //prototipe fungsi
-	void regis_login();
-	void registrasi();
-	void login();
-	void loading();
-	void judul_proHEALTH();
-	void menu();
-	void info();
-	void info_ProHealth();
-	void layanan_ProHealth();
-	void tentang_pembuat();
-	void judul_HIMT();
-	void info_HIMT();
-	void menghitung_IMT();
-	void daftar_kalori_makanan();
-	void menghitung_kebutuhan_kalori_perhari();
-	void menghitung_kalori();
-	void memasukkan_jenis_kelamin();
-	void BMR_laki_laki();
-	void BMR_perempuan();
-	void intensitas_aktivitas();
+	void regis_login ();
+	void registrasi ();
+	void login ();
+	void loading ();
+	void judul_proHEALTH ();
+	void menu ();
+	void info ();
+	void info_ProHealth ();
+	void layanan_ProHealth ();
+	void tentang_pembuat ();
+	void judul_HIMT ();
+	void info_HIMT ();
+	void menghitung_IMT ();
+	void daftar_kalori_makanan ();
+	void judul_TAKARI ();
+	void info_TAKARI ();
+	void memasukkan_jenis_kelamin ();
+	void BMR_laki_laki ();
+	void BMR_perempuan ();
+	void intensitas_aktivitas ();
+	void menghitung_kebutuhan_kalori_perhari ();
+	void judul_KALONI ();
+	void info_KALONI ();
+	void menghitung_kalori ();
 	void menulis_kalori();
 	void membaca_catatan_kalori();
 	void mode_terangGelap();
@@ -232,7 +236,7 @@ makanan Makanan[] = {
 void regis_login() {
 	printf("\t\t\t\t\t1) registrasi\n");
 	printf("\t\t\t\t\t2) login\n");
-	printf("\t\t\t\t\tMasukkan anda : ");
+	printf("\t\t\t\t\tMasukkan pilihan Anda : ");
 	
 	scanf("%d", &regislogin);
 	fflush(stdin);
@@ -257,7 +261,7 @@ void regis_login() {
 //=======================================================================//
 //>>>>>>>>>>>>>>>>>>>>>>  Fungsi Untuk Registrasi  <<<<<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
-// Nama Fungsi    : void registrasi                                      //
+// Nama Fungsi    : registrasi                                           //
 // Input Argumen  : -                                                    //
 //                  -                                                    //
 // Output Argumen : -                                                    //
@@ -333,7 +337,7 @@ void login() {
 		
 		printf (GREEN "\n\t\t\t\tusername dan password yang anda masukkan benar\n\n");
 		
-		printf ("\t\t\t\t\t\tSelamat datang %c\n\t\t\t\t\t", &Pengguna.namalengkap);
+		printf ("\t\t\t\t\t\tSelamat datang \n%c\n\t\t\t\t\t", &Pengguna.namalengkap);
 		
 		system ("pause");
 		
