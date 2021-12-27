@@ -185,8 +185,8 @@ makanan Makanan[] = {
 	void info_ProHealth();
 	void layanan_ProHealth();
 	void tentang_pembuat();
-	void info_IMT();
-	void judul_IMT();
+	void judul_HIMT();
+	void info_HIMT();
 	void menghitung_IMT();
 	void daftar_kalori_makanan();
 	void menghitung_kebutuhan_kalori_perhari();
@@ -202,7 +202,7 @@ makanan Makanan[] = {
 	
 //fungsi main
 
-int main() {
+	int main() {
 		
 		regis_login();
 
@@ -323,7 +323,7 @@ void login() {
 	scanf ("%s", &inputusername);
 	fflush (stdin);
 		
-	printf ("\t\t\t\tmasukkan password :");
+	printf ("\t\t\t\tMasukkan password :");
 	scanf ("%s", &inputpassword);
 	fflush (stdin);
 	
@@ -636,7 +636,7 @@ void layanan_ProHealth() {
             printf ("\t\t\t\t|                 L A Y A N A N    P R O H E A L T H            | \n");
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|===============================================================| \n");
-            printf ("\t\t\t\t|     Count BMI (CBMI), yang akan membantu kalian mengetahui    | \n");
+            printf ("\t\t\t\t|    Hitung IMT (HIMT), yang akan membantu kalian mengetahui    | \n");
             printf ("\t\t\t\t|       apakah status gizi kalian sudah sesuai berdasarkan      | \n");
 	    printf ("\t\t\t\t|            tinggi badan dan massa tubuh agar ideal.           | \n");
             printf ("\t\t\t\t|                                                               | \n");
@@ -669,39 +669,6 @@ void tentang_pembuat() {
             printf ("\t\t\t\t|                       (github.com/winataa)                    | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|                          Desember 2021                        | \n");
-            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
-}
-//=======================================================================//
-//>>>>>>>>>>>>>>>>>>>>>>>   Fungsi Tentang Kami   <<<<<<<<<<<<<<<<<<<<<<<//
-//=======================================================================//
-// Nama Fungsi    : info_IMT                                         //
-// Input Argumen  : -                                                    //
-// Output Argumen : -                                                    //
-// Deskripsi      : Fungsi ini merupakan fungsi yang berisi informasi    //
-//                  seputaran apa itu program ProHealth yang juga berisi //
-//                  deskripsi singkat mengenai menu-menu yang ada.       //
-//                                                                       //
-// Versi : 1                                        Rev. 0               //
-// Tgl   : 21-12-2021                               Tgl: -               //
-// I Putu Martin Winata - 2105551049                                     //
-// Kelas B                                                               //
-//                                                                       //
-// Revisi: -						                 //
-//=======================================================================//
-void info_IMT() {
-	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
-            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-	    printf ("\t\t\t\t|                  M E N G H I T U N G    I M T                 | \n");  
-            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-            printf ("\t\t\t\t|===============================================================| \n");
-            printf ("\t\t\t\t|   IMT (Indeks Massa Tubuh) merupakan nilai untuk menentukan   | \n");
-            printf ("\t\t\t\t|   apakah tubuh suatu indidu tergolong ideal atau tidak. IMT   | \n");
-            printf ("\t\t\t\t|            dapat dihitung dengan menggunakan rumus            | \n");
-            printf ("\t\t\t\t|                 IMT = massa / (tinggi * tinggi)               | \n");
-            printf ("\t\t\t\t|                     masssa (kg),tinggi (cm)                   | \n");
-            printf ("\t\t\t\t|                                                               | \n");
-            printf ("\t\t\t\t|      IMT tergolong normal yaitu berada diantara 18.5 - 25     | \n");
-            printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
 }
 
@@ -795,7 +762,7 @@ void menu_daftar_kalori_makanan(){
   	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
     	printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
     	
-    daftar_kalori_makanan();
+    	daftar_kalori_makanan();
 }
 
 void daftar_kalori_makanan(){
@@ -804,10 +771,10 @@ void daftar_kalori_makanan(){
 	printf ("\n\t\t\t\t ==------           Jenis makanan:                    ------==\n");
 	printf ("\t\t\t\t                   1) Karbohidrat                               \n");
 	printf ("\t\t\t\t                   2) Lauk Pauk                                 \n");
-	printf ("\t\t\t\t                   3) Buah                                      \n");
-	printf ("\t\t\t\t                   4) Sayur                                     \n\n");
+	printf ("\t\t\t\t                   3) Buah-buahan                               \n");
+	printf ("\t\t\t\t                   4) Sayuran                                   \n\n");
 	
-	printf ("\t\t\t\t\t    Masukkan pilihan makanan (Pilih 1-4):");
+	printf ("\t\t\t\t\t    Masukkan angka pilihan makanan (1-4):");
 	scanf ("%d", &pilihan_makanan);
 	fflush(stdin);
 	
@@ -886,7 +853,7 @@ void menghitung_kalori() {
 	
 	total_kalori += kalori_makanan;
 	
-	printf("\n\t\t\t\t\t    jumlah kalorinya yaitu : %d kalori\n",  kalori_makanan);
+	printf("\n\t\t\t\t\t    Jumlah kalorinya yaitu : %d kalori\n",  kalori_makanan);
 	
 	strncpy (yangDimakan[j].nama_makanan,Makanan[makanan].nama_makanan,21);
 	yangDimakan[j].kalori = kalori_makanan;
@@ -923,12 +890,62 @@ void menghitung_kalori() {
 	
 }
 
-
-void judul_IMT() {
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>>   Fungsi Judul HIMT   <<<<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : judul_IMT                                            //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang akan menampilkan    //
+//                  judul menu penghitungan IMT.                         //
+//                                                                       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 23-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+void judul_HIMT() {
 	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
 	    printf ("\t\t\t\t|                  M E N G H I T U N G    I M T                 | \n");  
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>>>   Fungsi info IMT   <<<<<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : info_IMT                                             //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang berisi informasi    //
+//                  seputaran apa itu menu penghitungan IMT.             //
+//                                                                       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 23-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+void info_HIMT() {
+	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    printf ("\t\t\t\t|                   T E N T A N G     H I M T                   | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+	    printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|   IMT (Indeks Massa Tubuh) merupakan nilai untuk menentukan   | \n");
+            printf ("\t\t\t\t|   apakah tubuh suatu indidu tergolong ideal atau tidak. IMT   | \n");
+            printf ("\t\t\t\t|            dapat dihitung dengan menggunakan rumus            | \n");
+            printf ("\t\t\t\t|                 IMT = massa / (tinggi * tinggi)               | \n");
+            printf ("\t\t\t\t|                     masssa (kg),tinggi (cm)                   | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|      IMT tergolong normal yaitu berada diantara 18.5 - 25     | \n");
+            printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
 }
 //=======================================================================//
@@ -1055,15 +1072,15 @@ void menghitung_IMT() { //IMT adalah singkatan dari Indeks Massa Tubuh
 }
 
 void BMR_laki_laki() {
-	printf("masukkan berat badan anda :");
+	printf("Masukkan berat badan anda :");
 	scanf ("%d", &berat_badan);
 	fflush(stdin);
 	
-	printf("masukkan tinggi badan anda :");
+	printf("Masukkan tinggi badan anda :");
 	scanf ("%d", &tinggi_badan);
 	fflush(stdin);
 	
-	printf("masukkkan umur anda :");
+	printf("Masukkkan umur anda :");
 	scanf ("%d", &umur);
 	fflush(stdin);
 	
@@ -1077,15 +1094,15 @@ void BMR_laki_laki() {
 }
 
 void BMR_perempuan() {
-	printf("masukkan berat badan anda :");
+	printf("Masukkan berat badan anda :");
 	scanf ("%d", &berat_badan);
 	fflush(stdin);
 	
-	printf("masukkan tinggi badan anda :");
+	printf("Masukkan tinggi badan anda :");
 	scanf ("%d", &tinggi_badan);
 	fflush(stdin);
 	
-	printf("masukkkan umur anda :");
+	printf("Masukkkan umur anda :");
 	scanf ("%d", &umur);
 	fflush(stdin);
 	
@@ -1156,7 +1173,7 @@ void intensitas_aktivitas() {
 		break;
 		
 		default : {
-		printf ("pilihan tidak valid\n");
+		printf ("Pilihan tidak valid\n");
 		system ("pause");
 		system ("cls");
 		memasukkan_jenis_kelamin();
@@ -1165,7 +1182,62 @@ void intensitas_aktivitas() {
 		
 		system ("pause");
 }
-
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>>   Fungsi Judul TAKARI   <<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : judul_TAKARI                                         //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang akan menampilkan    //
+//                  judul menu penghitungan IMT.                         //
+//                                                                       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 23-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+void judul_TAKARI() {
+	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    printf ("\t\t\t\t|     M E N G H I T U N G   K E B U T U H A N   K A L O R I     | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>>>   Fungsi info IMT   <<<<<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : info_IMT                                             //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang berisi informasi    //
+//                  seputaran apa itu menu penghitungan IMT.             //
+//                                                                       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 23-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+void info_HIMT() {
+	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    printf ("\t\t\t\t|                 T E N T A N G     T A K A R I                 | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|    Beda jenis kelamin, beda umur, beda aktivitas maka akan    | \n");
+            printf ("\t\t\t\t|   berbeda pula laju metabolismenya (Bassal Metabolic Rate).   | \n");
+            printf ("\t\t\t\t|         Dengan TAKARI (Takaran Kalori Per Hari), maka         | \n");
+	    printf ("\t\t\t\t|           Anda bisa memonitor kalori tubuh Anda agar          | \n");
+            printf ("\t\t\t\t|           kebutuhan kalori minimumnya bisa terpenuhi.         | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
 //=======================================================================//
 //>>>>>>>>   Fungsi Untuk Menghitung Kebutuhan Kalori Per Hari   <<<<<<<<//
 //=======================================================================//
