@@ -196,6 +196,7 @@ makanan Makanan[] = {
 	void BMR_perempuan();
 	void intensitas_aktivitas();
 	void menulis_kalori();
+	void membaca_catatan_kalori();
 	void mode_terangGelap();
 	void keluar();
 	
@@ -465,8 +466,8 @@ void menu() {
 	scanf ("%d", &masukan);
 	fflush(stdin);
 	
-	switch (masukan) {
-		case 1 : {
+	switch (masukan) { 
+		case 1 : {    //info          
 			info();
 			system ("pause");
 			menu();
@@ -474,52 +475,55 @@ void menu() {
 			break;
 		
 		
-		case 2 : {
-			menghitung_IMT();
+		case 2 : {    //menghitung IMT
+			menghitung_IMT();   
 			system ("pause");
 			menu();
 		}
 			break;
 			
-		case 3 : {
+		case 3 : {    //menghitung kebutuhan kalori perhari
 			menghitung_kebutuhan_kalori_perhari();
+			system ("pause");
 			menu();
 		}
 			break;
 			
-		case 4 : {
+		case 4 : {    //daftar kalori makanan
 			menu_daftar_kalori_makanan();
 			system ("pause");
 			menu();
 		}
 			break;
 		
-		case 5 : {
+		case 5 : {    //menghitung kalori pada makanan
 			menghitung_kalori();
+			system ("pause");
 			menu();
 		}
 			break;
 		
-		case 6 : {
+		case 6 : {    //menulis catatan konsumsi kalori
 			menulis_kalori();
 			system ("pause");
 			menu();
 		}
 			break;
 			
-		case 7 : {
+		case 7 : {    //membaca catatan kalori
+			membaca_catatan_kalori();
 			system ("pause");
 			menu();
 		}
 			break;
 			
-		case 8 : {
+		case 8 : {    //mengatur tampilan
 			mode_terangGelap();
 			menu();
 		}
 			break;
 		
-		case 9 : {
+		case 9 : {    //keluar
 			keluar();
 		}
 			break;
@@ -1210,6 +1214,27 @@ void menulis_kalori() {
 	
 	printf ("\t\t\t\tData berhasil ditulis \n\t\t\t\t");
 
+}
+
+void membaca_catatan_kalori() {
+	char data[50];
+    int i=1;
+    FILE *fp;
+
+    fp=fopen("catatan_kalori.txt", "r");
+	
+		printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+		printf ("\t\t\t\t|                  C A T A T A N   K A L O R I                  | \n");  
+    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+    	printf ("\t\t\t\t%c%c=============================================================%c%c \n\n",219,220,220,219);
+	
+    while(fgets(data,50,fp)!=NULL) //membaca dan mengulang sampai data habis
+    {
+        printf("\t\t\t\t|%s", data);
+        i++;
+    }
+    fclose(fp);
 }
 
 //=======================================================================//
