@@ -802,7 +802,63 @@ void daftar_kalori_makanan(){
 		
 	}
 };
-
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>>   Fungsi Judul KALONI   <<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : judul_KALONI                                         //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang akan menampilkan    //
+//                  judul menu penghitungan kalori pada makanan.         //
+//                                                                       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 23-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+void judul_KALONI() {
+	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    printf ("\t\t\t\t|       M E N G H I T U N G   K A L O R I   M A K A N A N       | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
+//=======================================================================//
+//>>>>>>>>>>>>>>>>>>>>>>>   Fungsi info KALONI   <<<<<<<<<<<<<<<<<<<<<<<<//
+//=======================================================================//
+// Nama Fungsi    : info_TAKARI                                          //
+// Input Argumen  : -                                                    //
+// Output Argumen : -                                                    //
+// Deskripsi      : Fungsi ini merupakan fungsi yang berisi informasi    //
+//                  seputaran apa itu menu penghitungan konsumsi kalori  //
+//                  yang ada di setiap daftar makanan.                   //
+//                                                                       //
+//                                                                       //
+// Versi : 1                                        Rev. 0               //
+// Tgl   : 23-12-2021                               Tgl: -               //
+// I Putu Martin Winata - 2105551049                                     //
+// Kelas B                                                               //
+//                                                                       //
+// Revisi: -						                 //
+//=======================================================================//
+void info_KALONI() {
+	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    printf ("\t\t\t\t|                 T E N T A N G     K A L O N I                 | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t|     Bedasarkan makanan yang masuk ke tubuh Anda, kami akan    | \n");
+            printf ("\t\t\t\t|  menghitungnya dengan Kalori Saat Ini (KALONI). Makanan yang  | \n");
+            printf ("\t\t\t\t|       kalorinya berbeda-beda awalnya akan dibedakan dari      | \n");
+	    printf ("\t\t\t\t|        jenisnya yang baru nanti akan dikalkulasi untuk        | \n");
+            printf ("\t\t\t\t|         memenuhi kebutuhan kalori minimum tubuh Anda.         | \n");
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+}
 //=======================================================================//
 //>>>>>>>>>>      Fungsi Untuk Menghitung Kalori Makanan       <<<<<<<<<<//
 //=======================================================================//
@@ -1207,13 +1263,14 @@ void judul_TAKARI() {
             printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
 }
 //=======================================================================//
-//>>>>>>>>>>>>>>>>>>>>>>>>>   Fungsi info IMT   <<<<<<<<<<<<<<<<<<<<<<<<<//
+//>>>>>>>>>>>>>>>>>>>>>>>   Fungsi info TAKARI   <<<<<<<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
-// Nama Fungsi    : info_IMT                                             //
+// Nama Fungsi    : info_TAKARI                                          //
 // Input Argumen  : -                                                    //
 // Output Argumen : -                                                    //
 // Deskripsi      : Fungsi ini merupakan fungsi yang berisi informasi    //
-//                  seputaran apa itu menu penghitungan IMT.             //
+//                  seputaran apa itu menu penghitungan kebutuhan        //
+//                  kalori tubuh per harinya.                            //
 //                                                                       //
 //                                                                       //
 // Versi : 1                                        Rev. 0               //
@@ -1223,7 +1280,7 @@ void judul_TAKARI() {
 //                                                                       //
 // Revisi: -						                 //
 //=======================================================================//
-void info_HIMT() {
+void info_TAKARI() {
 	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
 	    printf ("\t\t\t\t|                 T E N T A N G     T A K A R I                 | \n");  
