@@ -9,19 +9,11 @@
 #define GREEN "\e[32m\e[1m"
 
 
-<<<<<<< HEAD
-//variabel global
-	//variabel dalam fungsi registrasi
-	int regislogin;
-	
-	//variabel dalam fungsi login
-=======
 /*variabel global*/
 	/*variabel dalam fungsi registrasi*/
 	int regislogin;
 	
 	/*variabel dalam fungsi login*/
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	typedef struct user{
 	char namalengkap [50];
 	char username [20];
@@ -30,17 +22,13 @@
 
 	user Pengguna;
 	
-<<<<<<< HEAD
-	//variabel dalam fungsi login
-=======
 	/*variabel dalam fungsi login*/
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	char inputusername [20];
 	char inputpassword [20];
 	char username[20] = "userapa";
 	char password[20] = "passapa";	
 	
-	//variabel dalam perhitungan IMT
+	/*variabel dalam perhitungan IMT*/
 	int masukan;
 	int massa;
 	float tinggi;
@@ -48,7 +36,7 @@
 	int massa_min;
 	int massa_maks;
 	
-	//variabel dalam menghitung kebutuhan kalori perhari
+	/*variabel dalam menghitung kebutuhan kalori perhari*/
 	int berat_badan;
 	int tinggi_badan;
 	int umur;
@@ -57,11 +45,7 @@
 	int intensitas;
 	float kebutuhan_kalori_harian; 
 	
-<<<<<<< HEAD
-	//menghitung kalori
-=======
 	/*Menghitung kalori*/
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	int total_kalori = 0;
 	int j = 2;
 	int i = 2;
@@ -104,11 +88,7 @@ makanan Makanan[] = {
 	{"Mie Instant          ", 50, 168},
 	{"Spaghetti            ", 300,642},    //22
 	
-<<<<<<< HEAD
-	//lauk pauk
-=======
 	//Lauk pauk
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	{"Ayam Panggang        ", 80, 385},    //23
 	{"Telur Mata Sapi      ", 60, 40},
 	{"Telur Ayam Rebus     ", 60, 97},
@@ -128,11 +108,7 @@ makanan Makanan[] = {
 	{"Tahu Goreng          ", 150, 130},
 	{"Perkedel Jagung      ", 50, 108},
 	{"Perkedel Kentang     ", 50, 123},
-<<<<<<< HEAD
-	{"Fuyung Hai      ", 50, 114},
-=======
 	{"Fuyung Hai           ", 50, 114},
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	{"Rendang Daging       ", 75, 285},   //43
 	
 	//sayur
@@ -168,11 +144,7 @@ makanan Makanan[] = {
 	{"Salak                ", 150, 64},
 	{"Semangka             ", 150, 48},
 	{"Alpukat              ", 100, 85},
-<<<<<<< HEAD
-	{"Anggur 		           ", 125, 60},
-=======
 	{"Anggur 		   ", 125, 60},
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	{"Klengkeng            ", 200, 79},
 	{"Melon                ", 200, 46},
 	{"Mangga Harum Manis   ", 300, 90},
@@ -184,17 +156,10 @@ makanan Makanan[] = {
 
 };
 	
-<<<<<<< HEAD
-	//variabel dalam menulis catatan kalori
-	int kalori;
-	
-	//variabel pada menu tampilan*/
-=======
 	/*variabel dalam menulis catatan kalori*/
 	int kalori;
 	
 	/*variabel pada menu tampilan*/
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	int terangGelap = 0;
 	
 	tampilan() {
@@ -235,11 +200,7 @@ makanan Makanan[] = {
 	void mode_terangGelap();
 	void keluar();
 	
-<<<<<<< HEAD
-//fungsi main
-=======
 // fungsi main
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 
 int main() {
 		
@@ -250,11 +211,7 @@ int main() {
 
 
 //=======================================================================//
-<<<<<<< HEAD
-//>>>>>>>>>>>>>>> Fungsi Untuk Registrasi atau Login  <<<<<<<<<<<<<<<<<<<//
-=======
 //>>>>>>>>>>>>>>>   Fungsi Untuk Registrasi atau Login   <<<<<<<<<<<<<<<<//
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 //=======================================================================//
 // Nama Fungsi    : regis_login                                          //
 // Input Argumen  : -                                                    //
@@ -340,15 +297,6 @@ void registrasi() {	/*deklarasi fungsi void*/
 // Nama Fungsi    : login                                                //
 // Input Argumen  : -                                                    //
 // Output Argumen : -                                                    //
-<<<<<<< HEAD
-// Deskripsi      : Fungsi ini akan mengarahkan user untuk login setelah //
-//                  registrasi dengan memasukkan username dan password   //
-//                  yang dibuat saat registrasi atau sesuai dengan yang  //
-//                  telah direservasi atau ditetapkan. Jika username     //
-//                  dan password benar, user akan masuk ke menu, tapi    //
-//                  apabila salah akan diminta kembali memasukkan        //
-//                  username dan password hingga benar.                  //
-=======
 // Deskripsi      : Fungsi ini akan mengarahkan user untuk login saat    //
 //                  berhasil registrasi, dengan memasukkan kembali       //
 //                  username dan password yang telah dibuat atau         //
@@ -356,7 +304,6 @@ void registrasi() {	/*deklarasi fungsi void*/
 //                  user akan diarahkan ke menu, namun jika salah user   //
 //                  akan diminta kembali memasukkan username dan         //
 //                  password hingga benar.                               //
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 //                                                                       //
 // Versi : 1.0                                      Rev. -               //
 // Tgl   : 21-12-2021                               Tgl: -               //
@@ -374,17 +321,6 @@ void login() {
 	printf ("\n");
 	printf ("\t\t\t\tmasukkan username :");
 	scanf ("%s", &inputusername);
-<<<<<<< HEAD
-		
-	printf ("\t\t\t\tmasukkan password :");
-	scanf ("%s", &inputpassword);
-	
-	//basis
-	if ((strcmp(username, inputusername) == 0 || strcmp(Pengguna.username, inputusername) == 0) && ( strcmp(password, inputpassword) == 0 || strcmp(Pengguna.password, inputpassword) == 0 )	){
-		system ("cls");
-		
-		printf ("\n\t\t\t\tusername dan password yang anda masukkan benar\n\n");
-=======
 	fflush (stdin);
 		
 	printf ("\t\t\t\tmasukkan password :");
@@ -399,7 +335,6 @@ void login() {
 		
 		sleep(1);
 		tampilan();
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 		
 		printf ("\t\t\t\t\t\tselamat datang\n\t\t\t\t\t");
 		
@@ -412,14 +347,6 @@ void login() {
 		menu();
 	}
 	
-<<<<<<< HEAD
-	//rekurens
-		else {
-		system ("cls");
-		
-		printf ("\n\t\t\t\tusername atau password yang anda masukkan salah\n\n\t\t\t\t\t");
-		
-=======
 	/*rekurens*/
 		else {
 		system ("cls");
@@ -428,7 +355,6 @@ void login() {
 		
 		sleep(1);
 		tampilan();
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 		system ("pause");
 		
 		login();
@@ -453,24 +379,15 @@ void login() {
 
 void loading () {
     system ("cls");                                                   
-<<<<<<< HEAD
-	char loading1[52] = "\t\t\t\t|================================================|";
-=======
 	char loading1[55] = "\t\t\t\t|================================================|";
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	int i;
 	printf              ("\t\t\t\t                    loading...                  \n");
 	for (i=0; i < 15; i++){
 		Sleep(150);
 		printf ("%c", loading1[i]);}
-
 	for (i=15; i < 25; i++){
 		Sleep(200);
 		printf ("%c", loading1[i]);}
-<<<<<<< HEAD
-
-=======
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	for (i=25; i < 53; i++){
 		Sleep(100);
 		printf ("%c", loading1[i]);
@@ -573,11 +490,7 @@ void menu() {
 		}
 			break;
 			
-<<<<<<< HEAD
-		case 3 : {    //menghitung kebutuhan kalori per hari
-=======
 		case 3 : {    //menghitung kebutuhan kalori perhari
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 			menghitung_kebutuhan_kalori_perhari();
 			system ("pause");
 			menu();
@@ -715,11 +628,7 @@ void info_ProHealth() {
             printf ("\t\t\t\t|   ProHealth hadir di tengah masalah tersebut untuk membantu   | \n");
             printf ("\t\t\t\t|                 menjaga pola hidup sehat kalian!              | \n");
             printf ("\t\t\t\t|                                                               | \n");
-<<<<<<< HEAD
-            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
-=======
             printf ("\t\t\t\t%c%c=============================================================%c%c \n\t\t\t\t",219,220,220,219);
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 }
 
 void layanan_ProHealth() {
@@ -741,11 +650,7 @@ void layanan_ProHealth() {
             printf ("\t\t\t\t|  Anti Dehidrasi (ANDI), yang akan memberi pesan untuk kalian  | \n");
             printf ("\t\t\t\t|      agar jangan sampai tubuh kita mengalami dehidrasi.       | \n");
             printf ("\t\t\t\t|                                                               | \n");
-<<<<<<< HEAD
-            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
-=======
             printf ("\t\t\t\t%c%c=============================================================%c%c \n\t\t\t\t",219,220,220,219);
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 }
 
 void tentang_pembuat() {
@@ -760,19 +665,11 @@ void tentang_pembuat() {
             printf ("\t\t\t\t|               Putu Nanda Arya Adyatma (2105551035))           | \n");
             printf ("\t\t\t\t|                   (github.com/nandaadyatma)                   | \n");
             printf ("\t\t\t\t|                                                               | \n");
-<<<<<<< HEAD
-            printf ("\t\t\t\t|                 I Putu Martin Winata (2105551049))            | \n");
-            printf ("\t\t\t\t|                       (github.com/winataa)                    | \n");
-            printf ("\t\t\t\t|                                                               | \n");
-            printf ("\t\t\t\t|                          Desember 2021                        | \n");
-            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
-=======
             printf ("\t\t\t\t|                  I Putu Martin Winata (105551049))              | \n");
             printf ("\t\t\t\t|                       (github.com/winataa)                    | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|                          Desember 2021                        | \n");
             printf ("\t\t\t\t%c%c=============================================================%c%c \n\t\t\t\t",219,220,220,219);
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 }
 
 void info_IMT() {
@@ -854,8 +751,6 @@ void menampikan_buah() {
 	
 }
 
-<<<<<<< HEAD
-=======
 //=======================================================================//
 //>>>>>>>>>>>   Fungsi Untuk Menampilkan Kalori Pada Makanan   <<<<<<<<<<//
 //=======================================================================//
@@ -876,7 +771,6 @@ void menampikan_buah() {
 //                                                                       //
 //=======================================================================//
 
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 void menu_daftar_kalori_makanan(){
 	system ("cls");
 	
@@ -892,21 +786,12 @@ void menu_daftar_kalori_makanan(){
 void daftar_kalori_makanan(){
 	int pilihan_makanan;
 
-<<<<<<< HEAD
-	printf ("\n\t\t\t\t ==------           Jenis makanan:                    ------==\n");
-	printf ("\t\t\t\t                   1) Karbohidrat                               \n");
-	printf ("\t\t\t\t                   2) Lauk Pauk                                 \n");
-	printf ("\t\t\t\t                   3) Buah                                      \n");
-	printf ("\t\t\t\t                   4) Sayur                                     \n\n");
-	
-=======
 	printf ("\n\t\t\t\t ==------               Jenis makanan:                ------==\n");
 	printf ("\t\t\t\t                       1) Karbohidrat                            \n");
 	printf ("\t\t\t\t                       2) Lauk Pauk                             \n");
 	printf ("\t\t\t\t                       3) Buah                                  \n");
 	printf ("\t\t\t\t                       4) Sayur                                 \n\n");
 	 
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	printf ("\t\t\t\t\t    Masukkan pilihan makanan (Pilih 1-4):");
 	scanf ("%d", &pilihan_makanan);
 	fflush(stdin);
@@ -936,8 +821,6 @@ void daftar_kalori_makanan(){
 	}
 };
 
-<<<<<<< HEAD
-=======
 //=======================================================================//
 //>>>>>>>>>>      Fungsi Untuk Menghitung Kalori Makanan       <<<<<<<<<<//
 //=======================================================================//
@@ -958,7 +841,6 @@ void daftar_kalori_makanan(){
 //                                                                       //
 //=======================================================================//
 
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 void menghitung_kalori() {
 	int makanan;
 	int jumlah_gram;
@@ -989,11 +871,7 @@ void menghitung_kalori() {
 	
 	total_kalori += kalori_makanan;
 	
-<<<<<<< HEAD
-	printf("\n\t\t\t\t\t    Jumlah kalorinya yaitu : %d kalori\n",  kalori_makanan);
-=======
 	printf("\n\t\t\t\t\t    jumlah kalorinya yaitu : %d kalori\n",  kalori_makanan);
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	
 	strncpy (yangDimakan[j].nama_makanan,Makanan[makanan].nama_makanan,21);
 	yangDimakan[j].kalori = kalori_makanan;
@@ -1006,17 +884,10 @@ void menghitung_kalori() {
 	
 	}
 	
-<<<<<<< HEAD
-	printf("\t\t\t\t\t    Total kalori : %d kalori\n", total_kalori);
-
-	
-	printf("\n\t\t\t\t\t    Ingin menambah kalori pada makanan lain? (1/0) :");
-=======
 	printf("\t\t\t\t\t    total kalori : %d kalori\n", total_kalori);
 
 	
 	printf("\n\t\t\t\t\t    ingin menambah kalori pada makanan lain? (1/0) :");
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	scanf ("%d", &menambah);
 	fflush(stdin);
 	
@@ -1026,11 +897,7 @@ void menghitung_kalori() {
 	switch (menambah) {
 		case 0 : {
 		system ("cls");
-<<<<<<< HEAD
-		printf ("\n\t\t\t\t\t    terimakasih");
-=======
 		printf ("\n\t\t\t\t\t    terimakasih\n");
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 		}
 		break;
 		
@@ -1052,7 +919,7 @@ void judul_IMT() {
 //=======================================================================//
 //>>>>>>>>>>>>>>>>>>>   Fungsi Untuk Menghitung IMT   <<<<<<<<<<<<<<<<<<<//
 //=======================================================================//
-// Nama Fungsi    : menghitung_IMT                             		     //
+// Nama Fungsi    : menghitung_IMT                                //
 // Input Argumen  : -                                                    //
 // Output Argumen : -                                                    //
 // Deskripsi      : Fungsi ini akan menghitung dan menampilkan analisis  //
@@ -1100,11 +967,7 @@ void menghitung_IMT() { /*IMT adalah singkatan dari Indeks Massa Tubuh*/
 	    massa_min = (18.5 *(tinggi*tinggi));
 	    massa_maks = (25 * (tinggi*tinggi));
 	
-<<<<<<< HEAD
-	printf ("\n\t\t\t\t\t   Angka Indeks Massa Tubuh (IMT) Anda adalah:\n ");
-=======
 	printf ("\n\t\t\t\t\t   Angka Indeks Massa Tubuh (IMT) anda adalah:\n ");
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
         
 	if (IMT < 16) {
 		printf (RED "\t\t\t\t\t\t\t   %0.3f \n",IMT );
@@ -1199,17 +1062,6 @@ void BMR_laki_laki() {
 }
 
 void BMR_perempuan() {
-<<<<<<< HEAD
-	printf("Masukkan berat badan anda :");
-	scanf ("%d", &berat_badan);
-	fflush(stdin);
-	
-	printf("Masukkan tinggi badan anda :");
-	scanf ("%d", &tinggi_badan);
-	fflush(stdin);
-	
-	printf("Masukkkan umur anda :");
-=======
 	printf("\t\t\t\t\tmasukkan berat badan anda :");
 	scanf ("%d", &berat_badan);
 	fflush(stdin);
@@ -1219,7 +1071,6 @@ void BMR_perempuan() {
 	fflush(stdin);
 	
 	printf("\t\t\t\t\tmasukkkan umur anda :");
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 	scanf ("%d", &umur);
 	fflush(stdin);
 	
@@ -1246,16 +1097,6 @@ void intensitas_aktivitas() {
 		
 		system ("cls");
 		
-<<<<<<< HEAD
-		printf("Intensitas aktivitas\n");
-		printf("1) Tidak aktif   (Jarang berolahraga)\n");
-		printf("2) sedikit aktif (Berolahraga ringan 1-3 hari seminggu)\n");
-		printf("3) Cukup aktif   (Berolahraga intensitas sedang 3-5 hari seminggu)\n");
-		printf("4) Sangat aktif  (Berolahraga intensitas berat 6-7 hari seminggu)\n");
-		printf("5) Ekstra aktif  (Berolahraga intensitas sangat berat 6-7 hari \n");
-		printf("Seminggu atau bekerja di bidang yang membutuhkan stamina dan fisik yang kuat)\n");
-		printf("\nMasukkan pilihan anda (1-5) : ");
-=======
 		printf("\t\t\t\tIntensitas aktivitas\n");
 		printf("\t\t\t\t1) Tidak aktif   (Jarang berolahraga)\n");
 		printf("\t\t\t\t2) sedikit aktif (Berolahraga ringan 1-3 hari seminggu)\n");
@@ -1264,7 +1105,6 @@ void intensitas_aktivitas() {
 		printf("\t\t\t\t5) Ekstra aktif  (Berolahraga intensitas sangat berat 6-7 hari \n");
 		printf("\t\t\t\tSeminggu atau bekerja di bidang yang membutuhkan stamina dan fisik yang kuat)\n");
 		printf("\n\t\t\t\tMasukkan pilihan anda (1-5) : ");
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 		
 		scanf("%d", &intensitas);
 		fflush(stdin);
@@ -1362,135 +1202,6 @@ void menghitung_kebutuhan_kalori_perhari() {
 
 	intensitas_aktivitas();
 	
-}
-
-void menulis_kalori() {
-	struct tm *Sys_T;
-    time_t Tval;
-    Tval = time(NULL);
-    Sys_T = localtime(&Tval);
-
-	int i = 0;     //menyimpan indeks
-	FILE *fp;      //membuat pointer file
-	int ulang = 1; //menyimpan integer pengulangan
-	
-	fp = fopen("catatan_kalori.txt","a");
-	
-
-	
-	while(ulang == 1) {
-		system("cls");
-		
-		printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
-    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-		printf ("\t\t\t\t|         M E N U L I S    C A T A T A N   K A L O R I          | \n");  
-    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-    	printf ("\t\t\t\t%c%c=============================================================%c%c \n\n",219,220,220,219);
-    	
-		printf ("\t\t\t\tKonsumsi tanggal %d / %d / %d\n\t\t\t\tpukul : %d.%d \n", Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year, Sys_T->tm_hour, Sys_T->tm_min);
-        fprintf(fp, "\t\t%c %d / %d / %d\n",254, Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year);
-        fflush(stdin); 
-        
-        fprintf(fp, "\t\t\tjam : %d.%d\n", Sys_T->tm_hour, Sys_T->tm_min);
-       	fflush(stdin);
-       	
-		printf ("\t\t\t\tMasukkan jumlah kalori yang dikonsumsi (kal): ", i+1);
-		scanf("%d",&kalori);
-		fprintf(fp,"\t\t\tjumlah kalori : %d kal\n", kalori); 
-		fprintf(fp,"\t\t\t\--------------------------------\n"); 
-		fflush (stdin);
-		
-		
-		system ("cls");
-		
-		printf ("\t\t\t\tData berhasil ditulis\n\t\t\t\t");
-		
-		system ("pause");
-		
-		system ("cls");
-		
-		printf ("\t\t\t\tApakah ingin mengulang? (1/0) : ");
-		scanf ("%d", &ulang);
-		fflush(stdin);
-		
-		system ("cls");
-		
-		fprintf("%d\n", i);
-	}
-	
-	fclose(fp);
-	
-	printf ("\t\t\t\tData berhasil ditulis \n\t\t\t\t");
-
-}
-
-void membaca_catatan_kalori() {
-	char data[50];
-    int i=1;
-    FILE *fp;
-
-    fp=fopen("catatan_kalori.txt", "r");
-	
-		printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
-    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-		printf ("\t\t\t\t|                  C A T A T A N   K A L O R I                  | \n");  
-    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-    	printf ("\t\t\t\t%c%c=============================================================%c%c \n\n",219,220,220,219);
-	
-    while(fgets(data,50,fp)!=NULL) //membaca dan mengulang sampai data habis
-    {
-        printf("\t\t\t\t|%s", data);
-        i++;
-    }
-    fclose(fp);
-}
-
-//=======================================================================//
-//>>>>>>>>>>>>>>>>    Fungsi Untuk Mengatur Tampilan    <<<<<<<<<<<<<<<<<//
-//=======================================================================//
-// Nama Fungsi    : mode_terangGelap                                     //
-// Input Argumen  : -                                                    //
-// Output Argumen : -                                                    //
-// Deskripsi      : Fungsi ini akan membantu pengguna untuk mengatur     //
-//                  tampilan terminal program. User akan diminta untuk   //
-//                  memilih tampilan yang diinginkan                     //
-//                                                                       //
-// Versi : 1.0                                      Rev. -               //
-// Tgl   : 22-12-2021                               Tgl: -               //
-// Putu Nanda Arya Adyatma - 2105551035                                  //
-// Kelas B                                                               //
-//                                                                       //
-//=======================================================================//
-
-void mode_terangGelap() {
-	
-
-	printf("\t\t\t\t\tpilihan mode\n");
-	printf("\t\t\t\t\t1) Terang \n");
-	printf("\t\t\t\t\t2) Gelap  \n");
-	printf("\t\t\t\t\t\tMasukkan : ");
-	
-	scanf("%d",&terangGelap);
-	
-	system ("cls");
-	
-	switch (terangGelap) {
-		case 1 : {
-			system ("cls");
-			system ("color 70");
-			menu();
-			break;
-		}
-		
-		case 2 : {
-			system ("cls");
-			system ("color 07");
-			menu();
-			break;
-		
-		default : menu();
-		}
-	}
 }
 
 //=======================================================================//
@@ -1682,28 +1393,17 @@ void keluar() {
 	while(keluar == 1) {
 		system ("cls");
 		
-<<<<<<< HEAD
-		printf ("\t\t\t\t\tapakah yakin ingin keluar?\n");
-		printf ("\t\t\t\t\t0) kembali\n");
-		printf ("\t\t\t\t\t1) keluar\n");
-		printf ("\t\t\t\t\tmasukkan : ");
-=======
 		printf ("\t\t\t\t\tApakah yakin ingin keluar?\n");
 		printf ("\t\t\t\t\t0) Kembali\n");
 		printf ("\t\t\t\t\t1) Keluar\n");
 		printf ("\t\t\t\t\tMasukkan : ");
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 		
 		scanf ("%d", &keluar);
 		fflush (stdin);
 		
 		if (keluar == 1) { 
 		system ("cls");
-<<<<<<< HEAD
-		printf ("\t\t\t\t\t\tterima kasih\n");
-=======
 		printf ("\t\t\t\t\t\tTerima kasih\n");
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
 		break;	
 		}
 		
@@ -1720,8 +1420,4 @@ void keluar() {
 		
 		}
 		}
-<<<<<<< HEAD
 	}
-=======
-	}
->>>>>>> 498ab9e460103511bebf0a7d1a82fbef10de5246
