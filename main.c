@@ -190,6 +190,7 @@ makanan Makanan[] = {
 	void menghitung_IMT();
 	void daftar_kalori_makanan();
 	void menghitung_kebutuhan_kalori_perhari();
+	void info_TAKARI();
 	void menghitung_kalori();
 	void memasukkan_jenis_kelamin();
 	void BMR_laki_laki();
@@ -633,22 +634,21 @@ void info_ProHealth() {
 
 void layanan_ProHealth() {
 	
-			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|                 L A Y A N A N    P R O H E A L T H            | \n");
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|===============================================================| \n");
-            printf ("\t\t\t\t|     Count IMT (CIMT), yang akan membantu kalian mengetahui    | \n");
-            printf ("\t\t\t\t|       apakah status gizi kalian sudah sesuai berdasarkan      | \n");
+            printf ("\t\t\t\t|    Hitung IMT (HIMT), yang akan membantu kalian mengetahui    | \n");
+	   		printf ("\t\t\t\t|       apakah status gizi kalian sudah sesuai berdasarkan      | \n");
+            printf ("\t\t\t\t|  perbandingan massa tubuh dan perkalian tinggi badan kalian.  | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|      Takaran Kalori (TAKARI), yang akan menginformasikan      | \n");
             printf ("\t\t\t\t|    seberapa kalori yang tubuh kalian butuhkan per harinya.    | \n");
-            printf ("\t\t\t\t|                                                               | \n");
+	  		printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|   Kalori Saat Ini (KALONI), yang akan membantu kalian dalam   | \n");
             printf ("\t\t\t\t|      mengkalkulasi berapa banyak kalori yang sudah kalian     | \n");
             printf ("\t\t\t\t|       Konsumsi di tiap makanan yang dimakan per harinya.      | \n");
-            printf ("\t\t\t\t|  Anti Dehidrasi (ANDI), yang akan memberi pesan untuk kalian  | \n");
-            printf ("\t\t\t\t|      agar jangan sampai tubuh kita mengalami dehidrasi.       | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t%c%c=============================================================%c%c \n\t\t\t\t",219,220,220,219);
 }
@@ -663,9 +663,9 @@ void tentang_pembuat() {
             printf ("\t\t\t\t|                   ProHealth ini dibuat oleh  :                | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|               Putu Nanda Arya Adyatma (2105551035))           | \n");
-            printf ("\t\t\t\t|                   (github.com/nandaadyatma)                   | \n");
+            printf ("\t\t\t\t|                    (github.com/nandaadyatma)                  | \n");
             printf ("\t\t\t\t|                                                               | \n");
-            printf ("\t\t\t\t|                  I Putu Martin Winata (105551049))              | \n");
+            printf ("\t\t\t\t|                 I Putu Martin Winata (105551049))             | \n");
             printf ("\t\t\t\t|                       (github.com/winataa)                    | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|                          Desember 2021                        | \n");
@@ -673,14 +673,14 @@ void tentang_pembuat() {
 }
 
 void info_IMT() {
-			printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+		    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
-	    	printf ("\t\t\t\t|                  M E N G H I T U N G    I M T                 | \n");  
+	    	printf ("\t\t\t\t|                    T E N T A N G    H I M T                   | \n");  
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|===============================================================| \n");
             printf ("\t\t\t\t|   IMT (Indeks Massa Tubuh) merupakan nilai untuk menentukan   | \n");
-            printf ("\t\t\t\t|   apakah tubuh suatu indidu tergolong ideal atau tidak. IMT   | \n");
-            printf ("\t\t\t\t|            dapat dihitung dengan menggunakan rumus            | \n");
+            printf ("\t\t\t\t|   apakah tubuh suatu indidu tergolong ideal atau tidak. HIMT  | \n");
+            printf ("\t\t\t\t|   (HITUNG IMT) akan dapat dihitung dengan menggunakan rumus   | \n");
             printf ("\t\t\t\t|                 IMT = massa / (tinggi * tinggi)               | \n");
             printf ("\t\t\t\t|                     masssa (kg),tinggi (cm)                   | \n");
             printf ("\t\t\t\t|                                                               | \n");
@@ -841,11 +841,15 @@ void daftar_kalori_makanan(){
 //                                                                       //
 //=======================================================================//
 
+
+
+
 void menghitung_kalori() {
 	int makanan;
 	int jumlah_gram;
 	int kalori_makanan = 0;
 	int menambah;
+	
 	
 	system ("cls");
 	
@@ -854,6 +858,7 @@ void menghitung_kalori() {
 	printf ("\t\t\t\t|        M E N G H I T U N G   K A L O R I   M A K A N A N      | \n");  
   	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
     	printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
+	
 	
 	daftar_kalori_makanan();
 	printf ("\t\t\t\t %c%c===============================================%c%c\n",219,220,220,219);
@@ -1148,7 +1153,25 @@ void intensitas_aktivitas() {
 		}
 		}
 		
-		system ("pause");
+	
+}
+
+
+
+void info_TAKARI() {
+	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+	    	printf ("\t\t\t\t|                  T E N T A N G    T A K A R I                 | \n");  
+            printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+            printf ("\t\t\t\t|===============================================================| \n");
+            printf ("\t\t\t\t|                                                               | \n");
+	  		printf ("\t\t\t\t|      Beda orang, beda gender, beda usia, beda aktivitas       | \n");
+            printf ("\t\t\t\t|      maka pasti akan berbeda pula kebutuhan kalori tubuh      | \n");
+            printf ("\t\t\t\t|       mereka per harinya. Dengan TAKARI (Takaran Kalori       | \n");
+            printf ("\t\t\t\t|       Per Hari) Anda akan jadi lebih tahu berapa banyak       | \n"); 
+			printf ("\t\t\t\t|         kalori yang tubuh Anda butuhkan setiap harinya.       | \n");  
+            printf ("\t\t\t\t|                                                               | \n");
+            printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,220,220,219);
 }
 
 //=======================================================================//
@@ -1172,6 +1195,12 @@ void intensitas_aktivitas() {
 
 void menghitung_kebutuhan_kalori_perhari() {
 	system("cls");
+	
+	info_TAKARI();
+	system ("pause");
+	
+	system("cls");
+	
 	
 	memasukkan_jenis_kelamin();
 	fflush (stdin);
