@@ -640,16 +640,20 @@ void layanan_ProHealth() {
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|===============================================================| \n");
             printf ("\t\t\t\t|    Hitung IMT (HIMT), yang akan membantu kalian mengetahui    | \n");
-	   		printf ("\t\t\t\t|       apakah status gizi kalian sudah sesuai berdasarkan      | \n");
+	    	printf ("\t\t\t\t|       apakah status gizi kalian sudah sesuai berdasarkan      | \n");
             printf ("\t\t\t\t|  perbandingan massa tubuh dan perkalian tinggi badan kalian.  | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|      Takaran Kalori (TAKARI), yang akan menginformasikan      | \n");
             printf ("\t\t\t\t|    seberapa kalori yang tubuh kalian butuhkan per harinya.    | \n");
-	  		printf ("\t\t\t\t|                                                               | \n");
+	    	printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|   Kalori Saat Ini (KALONI), yang akan membantu kalian dalam   | \n");
-            printf ("\t\t\t\t|      mengkalkulasi berapa banyak kalori yang sudah kalian     | \n");
+            printf ("\t\t\t\t|        mencatat berapa banyak kalori yang sudah kalian        | \n");
             printf ("\t\t\t\t|       Konsumsi di tiap makanan yang dimakan per harinya.      | \n");
-            printf ("\t\t\t\t|                                                               | \n");
+	    	printf ("\t\t\t\t|                                                               | \n"); 
+	    	printf ("\t\t\t\t|  Selain itu ProHealth juga menyediakan menu untuk menampilkan | \n");  
+            printf ("\t\t\t\t|  daftar kalori makanan, menghitung, mencatat dan menampilkan  | \n");
+	    	printf ("\t\t\t\t|           konsumsi kalori dari masing-masing user.            | \n");
+	    	printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t%c%c=============================================================%c%c \n\t\t\t\t",219,220,220,219);
 }
 
@@ -665,7 +669,7 @@ void tentang_pembuat() {
             printf ("\t\t\t\t|               Putu Nanda Arya Adyatma (2105551035))           | \n");
             printf ("\t\t\t\t|                    (github.com/nandaadyatma)                  | \n");
             printf ("\t\t\t\t|                                                               | \n");
-            printf ("\t\t\t\t|                 I Putu Martin Winata (105551049))             | \n");
+            printf ("\t\t\t\t|                 I Putu Martin Winata (2105551049))            | \n");
             printf ("\t\t\t\t|                       (github.com/winataa)                    | \n");
             printf ("\t\t\t\t|                                                               | \n");
             printf ("\t\t\t\t|                          Desember 2021                        | \n");
