@@ -9,11 +9,25 @@ TugasBesarNaTa
 **PROGRAM INI** akan memberikan analisis tentang kecukupan gizi dan kondisi kesehatan berdasarkan menu yang dipilih user.
 
 ProHealth kami memiliki beberapa fitur atau menu di dalamnya, diantaranya:
+      
  
       1. MENGHITUNG INDEKS MASSA TUBUH (IMT)
          Indeks Massa Tubuh merupakan proksi heuristik atau kategorisasi kadar lemak tubuh manusia berdasarkan berat badan mahasiswa dan tingginya.
          
+      2. MENGHITUNG INDEKS MASSA TUBUH (IMT)
+         Indeks Massa Tubuh merupakan proksi heuristik atau kategorisasi kadar lemak tubuh manusia berdasarkan berat badan mahasiswa dan tingginya.
          
+      3. MENGHITUNG KEBUTUHAN KALORI PER HARI
+         Indeks Massa Tubuh merupakan proksi heuristik atau kategorisasi kadar lemak tubuh manusia berdasarkan berat badan mahasiswa dan tingginya.
+         
+      4. MENAMPILKAN DAFTAR KALORI MAKANAN
+         Indeks Massa Tubuh merupakan proksi heuristik atau kategorisasi kadar lemak tubuh manusia berdasarkan berat badan mahasiswa dan tingginya.
+         
+      5. MENCATAT DAN MENULIS KONSUMSI KALORI
+         Indeks Massa Tubuh merupakan proksi heuristik atau kategorisasi kadar lemak tubuh manusia berdasarkan berat badan mahasiswa dan tingginya.   
+         
+      6. MENGUBAH TAMPILAN PENGGUNA
+         Indeks Massa Tubuh merupakan proksi heuristik atau kategorisasi kadar lemak tubuh manusia berdasarkan berat badan mahasiswa dan tingginya.   
          
          
          
