@@ -195,6 +195,7 @@ makanan Makanan[] = {
 	void intensitas_aktivitas();
 	void menulis_kalori();
 	void membaca_catatan_kalori();
+	void catatan_riwayat_penggunaan();
 	void mode_terangGelap();
 	void keluar();
 	
@@ -460,10 +461,11 @@ void menu() {
     printf ("\t\t\t\t|   3   |  Menghitung Kebutuhan Kalori Per Hari  |\n");
     printf ("\t\t\t\t|   4   |  Daftar Kalori Makanan                 |\n");
     printf ("\t\t\t\t|   5   |  Menghitung Kalori pada Makanan        |\n");
-    printf ("\t\t\t\t|   6   |  Menulis Catatan Kalori Per Hari       |\n");
+   	printf ("\t\t\t\t|   6   |  Menulis Catatan Kalori Per Hari       |\n");
     printf ("\t\t\t\t|   7   |  Membaca Catatan Kalori                |\n");
-    printf ("\t\t\t\t|   8   |  Pengaturan Tampilan                   |\n");
-    printf ("\t\t\t\t%c   9   |  Keluar                                %c\n",186,186);
+    printf ("\t\t\t\t|   8   |  Riwayat Penggunaan Program            |\n");
+    printf ("\t\t\t\t|   9   |  Pengaturan Tampilan                   |\n");
+    printf ("\t\t\t\t%c   10  |  Keluar                                %c\n",186,186);
     printf ("\t\t\t\t%c%c==============================================%c%c\n",219,220,220,219);
 	
 	printf ("\n");
@@ -524,12 +526,18 @@ void menu() {
 			break;
 			
 		case 8 : {    //mengatur tampilan console (terminal)
-			mode_terangGelap();
+			catatan_riwayat_penggunaan();
+			system ("pause");
 			menu();
 		}
 			break;
 		
 		case 9 : {    //keluar
+			mode_terangGelap();
+		}
+			break;
+		
+		case 10 : {    //keluar
 			keluar();
 		}
 			break;
@@ -840,6 +848,24 @@ void daftar_kalori_makanan(){
 
 
 void menghitung_kalori() {
+	//menulis riwayat=======================================
+	struct tm *Sys_T;
+    time_t Tval;
+    Tval = time(NULL);
+    Sys_T = localtime(&Tval);
+    
+	FILE *fpr;      //membuat pointer file external
+	fpr = fopen ("catatan_riwayat_penggunaan.txt","a");
+	
+	fprintf(fpr, "\t\t%c %s\n",254,inputusername);    
+	fprintf(fpr, "\t\t %d / %d / %d", Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year);
+	fprintf(fpr, " - jam : %d.%d\n", Sys_T->tm_hour, Sys_T->tm_min);
+	fprintf(fpr, "\t\tmenghitung kalori pada makanan\n");
+	fprintf(fpr, "\t\t-------------------------\n");
+   
+	fclose(fpr);
+	//=======================================================
+	
 	int makanan;
 	int jumlah_gram;
 	int kalori_makanan = 0;
@@ -936,6 +962,24 @@ void judul_IMT() {
 //=======================================================================//
 
 void menghitung_IMT() { //IMT adalah singkatan dari Indeks Massa Tubuh
+	
+	//menulis riwayat=======================================
+	struct tm *Sys_T;
+    time_t Tval;
+    Tval = time(NULL);
+    Sys_T = localtime(&Tval);
+    
+	FILE *fpr;      //membuat pointer file external
+	fpr = fopen ("catatan_riwayat_penggunaan.txt","a");
+	
+	fprintf(fpr, "\t\t%c %s\n",254,inputusername);    
+	fprintf(fpr, "\t\t %d / %d / %d", Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year);
+	fprintf(fpr, " - jam : %d.%d\n", Sys_T->tm_hour, Sys_T->tm_min);
+	fprintf(fpr, "\t\tmenghitung IMT\n");
+	fprintf(fpr, "\t\t-------------------------\n");
+   
+	fclose(fpr);
+	//=======================================================
 	
 	system("cls"); //Layar nantinya akan dibersihkan sebelum menjalankan kode di baris selanjutnya
 	
@@ -1188,6 +1232,25 @@ void info_TAKARI() {
 //=======================================================================//
 
 void menghitung_kebutuhan_kalori_perhari() {
+	
+	//menulis riwayat=======================================
+	struct tm *Sys_T;
+    time_t Tval;
+    Tval = time(NULL);
+    Sys_T = localtime(&Tval);
+    
+	FILE *fpr;      //membuat pointer file external
+	fpr = fopen ("catatan_riwayat_penggunaan.txt","a");
+	
+	fprintf(fpr, "\t\t%c %s\n",254,inputusername);    
+	fprintf(fpr, "\t\t %d / %d / %d", Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year);
+	fprintf(fpr, " - jam : %d.%d\n", Sys_T->tm_hour, Sys_T->tm_min);
+	fprintf(fpr, "\t\tmenghitung kebutuhan kalori perhari\n");
+	fprintf(fpr, "\t\t-------------------------\n");
+   
+	fclose(fpr);
+	//=======================================================
+	
 	system("cls");
 	
 	info_TAKARI();
@@ -1245,6 +1308,7 @@ void menghitung_kebutuhan_kalori_perhari() {
 //=======================================================================//
 
 void menulis_kalori() {
+	
 	struct tm *Sys_T;
     time_t Tval;
     Tval = time(NULL);
@@ -1252,6 +1316,20 @@ void menulis_kalori() {
 
 	FILE *fp;      //membuat pointer file external
 	int ulang = 1; //menyimpan integer perulangan
+	
+	//menulis riwayat=======================================
+	
+	FILE *fpr;      //membuat pointer file external
+	fpr = fopen ("catatan_riwayat_penggunaan.txt","a");
+	
+	fprintf(fpr, "\t\t%c %s\n",254,inputusername);    
+	fprintf(fpr, "\t\t %d / %d / %d", Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year);
+	fprintf(fpr, " - jam : %d.%d\n", Sys_T->tm_hour, Sys_T->tm_min);
+	fprintf(fpr, "\t\tmenulis catatan kalori\n");
+	fprintf(fpr, "\t\t-------------------------\n");
+   
+	fclose(fpr);
+	//=======================================================
 	
 	fp = fopen ("catatan_kalori.txt","a");
 	
@@ -1341,6 +1419,30 @@ void membaca_catatan_kalori() {
     }
     printf ("\t\t\t\t%c%c=============================================================%c%c \n\n",219,220,220,219);
     fclose(fp);
+}
+
+void catatan_riwayat_penggunaan() {
+		char data[50];
+		FILE *fp;
+	
+    fp=fopen("catatan_riwayat_penggunaan.txt", "r");
+    
+    	system("cls");
+		printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+		printf ("\t\t\t\t|       C A T A T A N   R I W A Y A T  P E N G G U N A A N      | \n");  
+    	printf ("\t\t\t\t|---------------------------------------------------------------| \n");
+    	printf ("\t\t\t\t================================================================= \n\n",219,220,220,219);
+	
+	
+     while(fgets(data,50,fp)!=NULL) //membaca dan mengulang sampai data habis
+    {
+        printf("\t\t\t\t|%s", data);
+        i++;
+    }
+    printf ("\t\t\t\t%c%c=============================================================%c%c \n\n",219,220,220,219);
+    fclose(fp);
+    
 }
 
 //=======================================================================//
