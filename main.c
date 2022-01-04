@@ -9,12 +9,13 @@
 #define GREEN "\e[32m\e[1m"
 
 
-//variabel global
-	//variabel dalam fungsi registrasi
-	int regislogin;
+	//variabel global
+
 	
-	//variabel dalam fungsi registrasi dan login
-	typedef struct user{
+	int regislogin;						//variabel dalam fungsi registrasi
+	
+	
+	typedef struct user{				//variabel dalam fungsi registrasi dan login
 	char namalengkap [50];
 	char username [20];
 	char password [20];
@@ -22,22 +23,19 @@
 
 	user Pengguna;
 	
-	//variabel dalam fungsi login
-	char inputusername [20];
+	char inputusername [20];			//variabel dalam fungsi login
 	char inputpassword [20];
 	char username[20] = "userapa";
 	char password[20] = "passapa";	
 	
-	//variabel dalam perhitungan IMT
-	int masukan;
+	int masukan;						//variabel dalam perhitungan IMT
 	int massa;
 	float tinggi;
 	float IMT; 
 	int massa_min;
 	int massa_maks;
 	
-	//variabel dalam menghitung kebutuhan kalori perhari
-	int berat_badan;
+	int berat_badan;					//variabel dalam menghitung kebutuhan kalori perhari
 	int tinggi_badan;
 	int umur;
 	int jenis_kelamin;
@@ -45,8 +43,7 @@
 	int intensitas;
 	float kebutuhan_kalori_harian; 
 	
-	//menghitung kalori
-	int total_kalori = 0;
+	int total_kalori = 0;				//menghitung kalori
 	int j = 2;
 	int i = 2;
 
@@ -56,7 +53,6 @@ typedef struct makanan {
 	int kalori;
 } makanan;
 
-	
 	
 makanan yangDimakan[];
 	
@@ -145,7 +141,7 @@ makanan Makanan[] = {
 	{"Salak                ", 150, 64},
 	{"Semangka             ", 150, 48},
 	{"Alpukat              ", 100, 85},
-	{"Anggur 		       ", 125, 60},
+	{"Anggur               ", 125, 60},
 	{"Klengkeng            ", 200, 79},
 	{"Melon                ", 200, 46},
 	{"Mangga Harum Manis   ", 300, 90},
@@ -203,7 +199,7 @@ makanan Makanan[] = {
 	void keluar();
 	
 
-// fungsi utama
+//fungsi utama
 int main() {
 		
 		regis_login();
@@ -580,7 +576,7 @@ void info() {
             printf ("\t\t\t\t\t 1) Apa itu ProHealth\n");
             printf ("\t\t\t\t\t 2) Layanan ProHealth\n");
             printf ("\t\t\t\t\t 3) Tentang Pembuat\n\n");
-            printf ("\t\t\t\t\t Masukkan pilihan :");
+            printf ("\t\t\t\t\t Masukkan pilihan : ");
             scanf ("%d", &masukan_info);
             fflush(stdin);
             
@@ -605,10 +601,6 @@ void info() {
 					menu();
 				}
 			}
-            
-            
-	    
-			
 }
 
 void info_ProHealth() {
@@ -635,7 +627,7 @@ void info_ProHealth() {
 
 void layanan_ProHealth() {
 	
-	    printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
+	   		printf ("\t\t\t\t%c%c=============================================================%c%c \n",219,223,223,219);
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
             printf ("\t\t\t\t|                 L A Y A N A N    P R O H E A L T H            | \n");
             printf ("\t\t\t\t|---------------------------------------------------------------| \n");
@@ -824,7 +816,7 @@ void daftar_kalori_makanan(){
 			break;
 		
 	}
-};
+}
 
 //=======================================================================//
 //>>>>>>>>>>      Fungsi Untuk Menghitung Kalori Makanan       <<<<<<<<<<//
@@ -845,8 +837,6 @@ void daftar_kalori_makanan(){
 // Kelas B                                                               //
 //                                                                       //
 //=======================================================================//
-
-
 
 
 void menghitung_kalori() {
@@ -884,9 +874,7 @@ void menghitung_kalori() {
 	printf("\n\t\t\t\t\t    Jumlah kalorinya yaitu : %d kalori\n",  kalori_makanan);
 	
 	strncpy (yangDimakan[j].nama_makanan,Makanan[makanan].nama_makanan,21);
-	yangDimakan[j].kalori = kalori_makanan;
-	
-	j++;
+	yangDimakan[j].kalori = kalori_makanan;	j++;
 		
 	printf("\n\t\t\t\t\t    Makanan Anda\n",  kalori_makanan);
 	for (i = 2; i < j; i++){
