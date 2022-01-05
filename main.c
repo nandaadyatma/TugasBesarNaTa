@@ -1300,11 +1300,12 @@ void menghitung_kebutuhan_kalori_perhari() {
 //                  kalori perhari individu (user), dan menampilkannya   //
 //                  kembali di layar.                                    //
 //                                                                       //
-// Versi : 1.0                                      Rev. -               //
+// Versi : 1.1                                      Rev. - 1             //
 // Tgl   : 24-12-2021                               Tgl: -               //
-// Putu NAnda Arya Adyatma - 2105551035                                  //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
 // Kelas B                                                               //
 //                                                                       //
+// Revisi : menambahkan pencatatan username pada catatan                 //
 //=======================================================================//
 
 void menulis_kalori() {
@@ -1347,7 +1348,7 @@ void menulis_kalori() {
 		printf ("\t\t\t\tKonsumsi tanggal %d / %d / %d\n\t\t\t\tpukul : %d.%d \n", Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year, Sys_T->tm_hour, Sys_T->tm_min);
         fprintf(fp, "\t\t%c %d / %d / %d\n",254, Sys_T->tm_mday, Sys_T->tm_mon+1, 1900+Sys_T->tm_year);
         fflush(stdin); 
-        
+        fprintf(fp, "\t\t\t%c %s\n",254,inputusername); 
         fprintf(fp, "\t\t\tjam : %d.%d\n", Sys_T->tm_hour, Sys_T->tm_min);
        	fflush(stdin);
        	
@@ -1393,7 +1394,7 @@ void menulis_kalori() {
 //                                                                       //
 // Versi : 1.0                                      Rev. -               //
 // Tgl   : 24-12-2021                               Tgl: -               //
-// Putu NAnda Arya Adyatma - 2105551035                                  //
+// Putu Nanda Arya Adyatma - 2105551035                                  //
 // Kelas B                                                               //
 //                                                                       //
 //=======================================================================//
